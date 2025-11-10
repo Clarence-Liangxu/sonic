@@ -1,0 +1,515 @@
+pkg: github.com/bytedance/sonic/internal/encoder/alg
+BenchmarkQuote/no_quote/sonic-10-16         	39216712	        30.41 ns/op
+BenchmarkQuote/no_quote/std-10-16           	18134482	        66.75 ns/op
+BenchmarkQuote/no_quote/sonic-100-16        	36645798	        32.00 ns/op
+BenchmarkQuote/no_quote/std-100-16          	 2191862	       546.2 ns/op
+BenchmarkQuote/no_quote/sonic-1000-16       	11511123	       105.0 ns/op
+BenchmarkQuote/no_quote/std-1000-16         	  224463	      5345 ns/op
+BenchmarkQuote/no_quote/sonic-10000-16      	 1499071	       801.0 ns/op
+BenchmarkQuote/no_quote/std-10000-16        	   22510	     53447 ns/op
+BenchmarkQuote/no_quote/sonic-100000-16     	  152965	      7835 ns/op
+BenchmarkQuote/no_quote/std-100000-16       	    2250	    533478 ns/op
+BenchmarkQuote/no_quote/sonic-1000000-16    	   14815	     79775 ns/op
+BenchmarkQuote/no_quote/std-1000000-16      	     224	   5321276 ns/op
+BenchmarkQuote/no_quote/sonic-10000000-16   	    1435	    842333 ns/op
+BenchmarkQuote/no_quote/std-10000000-16     	      21	  53203998 ns/op
+BenchmarkQuote/no_quote/sonic-100000000-16  	     129	   9240322 ns/op
+BenchmarkQuote/no_quote/std-100000000-16    	       2	 544748450 ns/op
+BenchmarkQuote/no_quote/sonic-1000000000-16 	       9	 126098083 ns/op
+BenchmarkQuote/no_quote/std-1000000000-16   	       1	5333224735 ns/op
+BenchmarkQuote/1/10_quote/sonic-10-16       	37775763	        30.62 ns/op
+BenchmarkQuote/1/10_quote/std-10-16         	16781863	        70.66 ns/op
+BenchmarkQuote/1/10_quote/sonic-100-16      	 9111768	       131.8 ns/op
+BenchmarkQuote/1/10_quote/std-100-16        	 1784755	       671.8 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000-16     	  959778	      1242 ns/op
+BenchmarkQuote/1/10_quote/std-1000-16       	  180700	      6617 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000-16    	   96786	     12374 ns/op
+BenchmarkQuote/1/10_quote/std-10000-16      	   18069	     66188 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000-16   	    9715	    123485 ns/op
+BenchmarkQuote/1/10_quote/std-100000-16     	    1803	    662280 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000-16  	     967	   1234818 ns/op
+BenchmarkQuote/1/10_quote/std-1000000-16    	     181	   6608536 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000000-16 	      82	  14294074 ns/op
+BenchmarkQuote/1/10_quote/std-10000000-16   	      16	  67270908 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000000-16         	       7	 151026096 ns/op
+BenchmarkQuote/1/10_quote/std-100000000-16           	       2	 688194672 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000000-16        	       1	2009392778 ns/op
+BenchmarkQuote/1/10_quote/std-1000000000-16          	       1	6726840555 ns/op
+BenchmarkQuote/1/5_quote/sonic-10-16                 	36030464	        34.15 ns/op
+BenchmarkQuote/1/5_quote/std-10-16                   	15796503	        76.48 ns/op
+BenchmarkQuote/1/5_quote/sonic-100-16                	 4771630	       253.0 ns/op
+BenchmarkQuote/1/5_quote/std-100-16                  	 2068491	       576.7 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000-16               	  481453	      2488 ns/op
+BenchmarkQuote/1/5_quote/std-1000-16                 	  208063	      5657 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000-16              	   48054	     24966 ns/op
+BenchmarkQuote/1/5_quote/std-10000-16                	   21211	     58581 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000-16             	    4803	    249544 ns/op
+BenchmarkQuote/1/5_quote/std-100000-16               	    2040	    572690 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000-16            	     480	   2490486 ns/op
+BenchmarkQuote/1/5_quote/std-1000000-16              	     211	   5655472 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000000-16           	      37	  28093982 ns/op
+BenchmarkQuote/1/5_quote/std-10000000-16             	      19	  57541655 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000000-16          	       4	 302988472 ns/op
+BenchmarkQuote/1/5_quote/std-100000000-16            	       2	 589674433 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000000-16         	       1	3377971238 ns/op
+BenchmarkQuote/1/5_quote/std-1000000000-16           	       1	5737660182 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	102.671s
+
+BenchmarkQuote/no_quote/sonic-10-16         	39404271	        30.40 ns/op
+BenchmarkQuote/no_quote/std-10-16           	18035478	        66.81 ns/op
+BenchmarkQuote/no_quote/sonic-100-16        	36756861	        32.46 ns/op
+BenchmarkQuote/no_quote/std-100-16          	 2193942	       547.1 ns/op
+BenchmarkQuote/no_quote/sonic-1000-16       	11467538	       104.9 ns/op
+BenchmarkQuote/no_quote/std-1000-16         	  224293	      5357 ns/op
+BenchmarkQuote/no_quote/sonic-10000-16      	 1493618	       804.8 ns/op
+BenchmarkQuote/no_quote/std-10000-16        	   22525	     53359 ns/op
+BenchmarkQuote/no_quote/sonic-100000-16     	  152949	      7843 ns/op
+BenchmarkQuote/no_quote/std-100000-16       	    2250	    533360 ns/op
+BenchmarkQuote/no_quote/sonic-1000000-16    	   14748	     79190 ns/op
+BenchmarkQuote/no_quote/std-1000000-16      	     225	   5322037 ns/op
+BenchmarkQuote/no_quote/sonic-10000000-16   	    1420	    831923 ns/op
+BenchmarkQuote/no_quote/std-10000000-16     	      21	  53222409 ns/op
+BenchmarkQuote/no_quote/sonic-100000000-16  	     128	   9258342 ns/op
+BenchmarkQuote/no_quote/std-100000000-16    	       2	 544391152 ns/op
+BenchmarkQuote/no_quote/sonic-1000000000-16 	      10	 108675331 ns/op
+BenchmarkQuote/no_quote/std-1000000000-16   	       1	5330326295 ns/op
+BenchmarkQuote/1/10_quote/sonic-10-16       	39000092	        31.21 ns/op
+BenchmarkQuote/1/10_quote/std-10-16         	17036283	        70.68 ns/op
+BenchmarkQuote/1/10_quote/sonic-100-16      	 9152098	       132.3 ns/op
+BenchmarkQuote/1/10_quote/std-100-16        	 1778695	       675.3 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000-16     	  967653	      1239 ns/op
+BenchmarkQuote/1/10_quote/std-1000-16       	  182094	      6640 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000-16    	   96976	     12376 ns/op
+BenchmarkQuote/1/10_quote/std-10000-16      	   18051	     66375 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000-16   	    9690	    123778 ns/op
+BenchmarkQuote/1/10_quote/std-100000-16     	    1810	    662470 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000-16  	     972	   1234437 ns/op
+BenchmarkQuote/1/10_quote/std-1000000-16    	     181	   6614863 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000000-16 	      81	  14311795 ns/op
+BenchmarkQuote/1/10_quote/std-10000000-16   	      16	  67265446 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000000-16         	       7	 153635683 ns/op
+BenchmarkQuote/1/10_quote/std-100000000-16           	       2	 684256554 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000000-16        	       1	2034440838 ns/op
+BenchmarkQuote/1/10_quote/std-1000000000-16          	       1	6726524668 ns/op
+BenchmarkQuote/1/5_quote/sonic-10-16                 	33588262	        33.91 ns/op
+BenchmarkQuote/1/5_quote/std-10-16                   	15938313	        75.11 ns/op
+BenchmarkQuote/1/5_quote/sonic-100-16                	 4742175	       253.0 ns/op
+BenchmarkQuote/1/5_quote/std-100-16                  	 2072466	       589.7 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000-16               	  480614	      2493 ns/op
+BenchmarkQuote/1/5_quote/std-1000-16                 	  211640	      5851 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000-16              	   48087	     24950 ns/op
+BenchmarkQuote/1/5_quote/std-10000-16                	   20610	     56638 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000-16             	    4816	    249252 ns/op
+BenchmarkQuote/1/5_quote/std-100000-16               	    2089	    567396 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000-16            	     478	   2490986 ns/op
+BenchmarkQuote/1/5_quote/std-1000000-16              	     211	   5645331 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000000-16           	      37	  28060064 ns/op
+BenchmarkQuote/1/5_quote/std-10000000-16             	      19	  57853887 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000000-16          	       4	 303379868 ns/op
+BenchmarkQuote/1/5_quote/std-100000000-16            	       2	 587637537 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000000-16         	       1	3373479975 ns/op
+BenchmarkQuote/1/5_quote/std-1000000000-16           	       1	5808768263 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	101.919s
+
+BenchmarkQuote/no_quote/sonic-10-16         	39556432	        30.42 ns/op
+BenchmarkQuote/no_quote/std-10-16           	17999204	        66.71 ns/op
+BenchmarkQuote/no_quote/sonic-100-16        	37606147	        32.35 ns/op
+BenchmarkQuote/no_quote/std-100-16          	 2194435	       546.7 ns/op
+BenchmarkQuote/no_quote/sonic-1000-16       	11539018	       105.1 ns/op
+BenchmarkQuote/no_quote/std-1000-16         	  224125	      5337 ns/op
+BenchmarkQuote/no_quote/sonic-10000-16      	 1496985	       800.4 ns/op
+BenchmarkQuote/no_quote/std-10000-16        	   22452	     53323 ns/op
+BenchmarkQuote/no_quote/sonic-100000-16     	  153040	      7838 ns/op
+BenchmarkQuote/no_quote/std-100000-16       	    2248	    533238 ns/op
+BenchmarkQuote/no_quote/sonic-1000000-16    	   14514	     78280 ns/op
+BenchmarkQuote/no_quote/std-1000000-16      	     224	   5322074 ns/op
+BenchmarkQuote/no_quote/sonic-10000000-16   	    1399	    850700 ns/op
+BenchmarkQuote/no_quote/std-10000000-16     	      21	  53241497 ns/op
+BenchmarkQuote/no_quote/sonic-100000000-16  	     128	   9259664 ns/op
+BenchmarkQuote/no_quote/std-100000000-16    	       2	 544499263 ns/op
+BenchmarkQuote/no_quote/sonic-1000000000-16 	      10	 106504144 ns/op
+BenchmarkQuote/no_quote/std-1000000000-16   	       1	5352057623 ns/op
+BenchmarkQuote/1/10_quote/sonic-10-16       	39089407	        30.49 ns/op
+BenchmarkQuote/1/10_quote/std-10-16         	17060185	        71.16 ns/op
+BenchmarkQuote/1/10_quote/sonic-100-16      	 9202381	       132.6 ns/op
+BenchmarkQuote/1/10_quote/std-100-16        	 1767051	       675.7 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000-16     	  964824	      1240 ns/op
+BenchmarkQuote/1/10_quote/std-1000-16       	  178326	      6700 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000-16    	   96952	     12370 ns/op
+BenchmarkQuote/1/10_quote/std-10000-16      	   17857	     66502 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000-16   	    9680	    123721 ns/op
+BenchmarkQuote/1/10_quote/std-100000-16     	    1820	    661369 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000-16  	     968	   1234305 ns/op
+BenchmarkQuote/1/10_quote/std-1000000-16    	     181	   6612433 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000000-16 	      82	  14384577 ns/op
+BenchmarkQuote/1/10_quote/std-10000000-16   	      16	  67097449 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000000-16         	       7	 149506342 ns/op
+BenchmarkQuote/1/10_quote/std-100000000-16           	       2	 683682378 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000000-16        	       1	1991170492 ns/op
+BenchmarkQuote/1/10_quote/std-1000000000-16          	       1	6716917110 ns/op
+BenchmarkQuote/1/5_quote/sonic-10-16                 	35790423	        33.89 ns/op
+BenchmarkQuote/1/5_quote/std-10-16                   	15743770	        75.28 ns/op
+BenchmarkQuote/1/5_quote/sonic-100-16                	 4750231	       253.0 ns/op
+BenchmarkQuote/1/5_quote/std-100-16                  	 2051127	       578.6 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000-16               	  482169	      2503 ns/op
+BenchmarkQuote/1/5_quote/std-1000-16                 	  211495	      5847 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000-16              	   48157	     24894 ns/op
+BenchmarkQuote/1/5_quote/std-10000-16                	   20695	     56596 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000-16             	    4806	    249566 ns/op
+BenchmarkQuote/1/5_quote/std-100000-16               	    2044	    581050 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000-16            	     478	   2491093 ns/op
+BenchmarkQuote/1/5_quote/std-1000000-16              	     210	   5659225 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000000-16           	      36	  28098493 ns/op
+BenchmarkQuote/1/5_quote/std-10000000-16             	      20	  57848421 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000000-16          	       4	 302571140 ns/op
+BenchmarkQuote/1/5_quote/std-100000000-16            	       2	 604008292 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000000-16         	       1	3371052898 ns/op
+BenchmarkQuote/1/5_quote/std-1000000000-16           	       1	5867569235 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	102.858s
+
+BenchmarkQuote/no_quote/sonic-10-16         	38895735	        30.42 ns/op
+BenchmarkQuote/no_quote/std-10-16           	18069760	        66.76 ns/op
+BenchmarkQuote/no_quote/sonic-100-16        	36940356	        32.43 ns/op
+BenchmarkQuote/no_quote/std-100-16          	 2189252	       547.4 ns/op
+BenchmarkQuote/no_quote/sonic-1000-16       	11502446	       103.9 ns/op
+BenchmarkQuote/no_quote/std-1000-16         	  223682	      5333 ns/op
+BenchmarkQuote/no_quote/sonic-10000-16      	 1492269	       808.3 ns/op
+BenchmarkQuote/no_quote/std-10000-16        	   22504	     53321 ns/op
+BenchmarkQuote/no_quote/sonic-100000-16     	  152940	      8237 ns/op
+BenchmarkQuote/no_quote/std-100000-16       	    2250	    533209 ns/op
+BenchmarkQuote/no_quote/sonic-1000000-16    	   14874	     78325 ns/op
+BenchmarkQuote/no_quote/std-1000000-16      	     224	   5319311 ns/op
+BenchmarkQuote/no_quote/sonic-10000000-16   	    1428	    835133 ns/op
+BenchmarkQuote/no_quote/std-10000000-16     	      21	  53215410 ns/op
+BenchmarkQuote/no_quote/sonic-100000000-16  	     129	   9303297 ns/op
+BenchmarkQuote/no_quote/std-100000000-16    	       2	 544188947 ns/op
+BenchmarkQuote/no_quote/sonic-1000000000-16 	      10	 105033939 ns/op
+BenchmarkQuote/no_quote/std-1000000000-16   	       1	5362045361 ns/op
+BenchmarkQuote/1/10_quote/sonic-10-16       	39454774	        30.43 ns/op
+BenchmarkQuote/1/10_quote/std-10-16         	17055700	        70.50 ns/op
+BenchmarkQuote/1/10_quote/sonic-100-16      	 9012070	       132.4 ns/op
+BenchmarkQuote/1/10_quote/std-100-16        	 1779704	       673.0 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000-16     	  966884	      1244 ns/op
+BenchmarkQuote/1/10_quote/std-1000-16       	  180973	      6645 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000-16    	   96847	     12383 ns/op
+BenchmarkQuote/1/10_quote/std-10000-16      	   18032	     66485 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000-16   	    9710	    123450 ns/op
+BenchmarkQuote/1/10_quote/std-100000-16     	    1804	    661656 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000-16  	     967	   1234691 ns/op
+BenchmarkQuote/1/10_quote/std-1000000-16    	     181	   6620262 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000000-16 	      82	  14327739 ns/op
+BenchmarkQuote/1/10_quote/std-10000000-16   	      16	  67140069 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000000-16         	       7	 152651993 ns/op
+BenchmarkQuote/1/10_quote/std-100000000-16           	       2	 683067772 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000000-16        	       1	1995518058 ns/op
+BenchmarkQuote/1/10_quote/std-1000000000-16          	       1	6726054184 ns/op
+BenchmarkQuote/1/5_quote/sonic-10-16                 	35563455	        34.21 ns/op
+BenchmarkQuote/1/5_quote/std-10-16                   	15474229	        76.38 ns/op
+BenchmarkQuote/1/5_quote/sonic-100-16                	 4756978	       253.2 ns/op
+BenchmarkQuote/1/5_quote/std-100-16                  	 2078064	       577.4 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000-16               	  479730	      2492 ns/op
+BenchmarkQuote/1/5_quote/std-1000-16                 	  211878	      5661 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000-16              	   48201	     24893 ns/op
+BenchmarkQuote/1/5_quote/std-10000-16                	   21196	     56562 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000-16             	    4802	    249615 ns/op
+BenchmarkQuote/1/5_quote/std-100000-16               	    2121	    565829 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000-16            	     480	   2490493 ns/op
+BenchmarkQuote/1/5_quote/std-1000000-16              	     211	   5642224 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000000-16           	      36	  28085823 ns/op
+BenchmarkQuote/1/5_quote/std-10000000-16             	      20	  57889875 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000000-16          	       4	 305147572 ns/op
+BenchmarkQuote/1/5_quote/std-100000000-16            	       2	 598337268 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000000-16         	       1	3379598132 ns/op
+BenchmarkQuote/1/5_quote/std-1000000000-16           	       1	5767546883 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	101.838s
+
+pkg: github.com/bytedance/sonic/internal/encoder/alg
+BenchmarkQuote/no_quote/sonic-10-16         	39413422	        30.43 ns/op
+BenchmarkQuote/no_quote/std-10-16           	17982141	        66.69 ns/op
+BenchmarkQuote/no_quote/sonic-100-16        	36914697	        32.28 ns/op
+BenchmarkQuote/no_quote/std-100-16          	 2200418	       545.6 ns/op
+BenchmarkQuote/no_quote/sonic-1000-16       	11526912	       105.0 ns/op
+BenchmarkQuote/no_quote/std-1000-16         	  223226	      5345 ns/op
+BenchmarkQuote/no_quote/sonic-10000-16      	 1498939	       806.2 ns/op
+BenchmarkQuote/no_quote/std-10000-16        	   22464	     53301 ns/op
+BenchmarkQuote/no_quote/sonic-100000-16     	  152962	      7836 ns/op
+BenchmarkQuote/no_quote/std-100000-16       	    2252	    532563 ns/op
+BenchmarkQuote/no_quote/sonic-1000000-16    	   15417	     77872 ns/op
+BenchmarkQuote/no_quote/std-1000000-16      	     224	   5320704 ns/op
+BenchmarkQuote/no_quote/sonic-10000000-16   	    1434	    829444 ns/op
+BenchmarkQuote/no_quote/std-10000000-16     	      21	  53306228 ns/op
+BenchmarkQuote/no_quote/sonic-100000000-16  	     128	   9234435 ns/op
+BenchmarkQuote/no_quote/std-100000000-16    	       2	 544730080 ns/op
+BenchmarkQuote/no_quote/sonic-1000000000-16 	      10	 104683356 ns/op
+BenchmarkQuote/no_quote/std-1000000000-16   	       1	5331618422 ns/op
+BenchmarkQuote/1/10_quote/sonic-10-16       	39514750	        30.44 ns/op
+BenchmarkQuote/1/10_quote/std-10-16         	16883504	        69.98 ns/op
+BenchmarkQuote/1/10_quote/sonic-100-16      	 9078712	       132.6 ns/op
+BenchmarkQuote/1/10_quote/std-100-16        	 1772913	       675.2 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000-16     	  967369	      1256 ns/op
+BenchmarkQuote/1/10_quote/std-1000-16       	  180192	      6654 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000-16    	   96943	     12354 ns/op
+BenchmarkQuote/1/10_quote/std-10000-16      	   18122	     66174 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000-16   	    9670	    123752 ns/op
+BenchmarkQuote/1/10_quote/std-100000-16     	    1807	    662918 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000-16  	     968	   1235308 ns/op
+BenchmarkQuote/1/10_quote/std-1000000-16    	     181	   6609124 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000000-16 	      82	  14331020 ns/op
+BenchmarkQuote/1/10_quote/std-10000000-16   	      16	  67215578 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000000-16         	       7	 153045654 ns/op
+BenchmarkQuote/1/10_quote/std-100000000-16           	       2	 683922281 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000000-16        	       1	1986644967 ns/op
+BenchmarkQuote/1/10_quote/std-1000000000-16          	       1	6729303193 ns/op
+BenchmarkQuote/1/5_quote/sonic-10-16                 	33271750	        34.90 ns/op
+BenchmarkQuote/1/5_quote/std-10-16                   	15475209	        76.33 ns/op
+BenchmarkQuote/1/5_quote/sonic-100-16                	 4752337	       252.5 ns/op
+BenchmarkQuote/1/5_quote/std-100-16                  	 2073115	       582.3 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000-16               	  482492	      2482 ns/op
+BenchmarkQuote/1/5_quote/std-1000-16                 	  206048	      5659 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000-16              	   48063	     24962 ns/op
+BenchmarkQuote/1/5_quote/std-10000-16                	   20500	     56544 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000-16             	    4798	    249630 ns/op
+BenchmarkQuote/1/5_quote/std-100000-16               	    2120	    565844 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000-16            	     480	   2490444 ns/op
+BenchmarkQuote/1/5_quote/std-1000000-16              	     210	   5847270 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000000-16           	      37	  28314946 ns/op
+BenchmarkQuote/1/5_quote/std-10000000-16             	      19	  58248876 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000000-16          	       4	 302816621 ns/op
+BenchmarkQuote/1/5_quote/std-100000000-16            	       2	 599949572 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000000-16         	       1	3381795686 ns/op
+BenchmarkQuote/1/5_quote/std-1000000000-16           	       1	5748686254 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	101.595s
+
+pkg: github.com/bytedance/sonic/internal/encoder/alg
+BenchmarkQuote/no_quote/sonic-10-16         	39481582	        30.42 ns/op
+BenchmarkQuote/no_quote/std-10-16           	17971514	        66.96 ns/op
+BenchmarkQuote/no_quote/sonic-100-16        	36901674	        31.96 ns/op
+BenchmarkQuote/no_quote/std-100-16          	 2198781	       546.2 ns/op
+BenchmarkQuote/no_quote/sonic-1000-16       	11531816	       104.5 ns/op
+BenchmarkQuote/no_quote/std-1000-16         	  224545	      5347 ns/op
+BenchmarkQuote/no_quote/sonic-10000-16      	 1497602	       804.8 ns/op
+BenchmarkQuote/no_quote/std-10000-16        	   22509	     53329 ns/op
+BenchmarkQuote/no_quote/sonic-100000-16     	  152901	      7838 ns/op
+BenchmarkQuote/no_quote/std-100000-16       	    2252	    532120 ns/op
+BenchmarkQuote/no_quote/sonic-1000000-16    	   15441	     78394 ns/op
+BenchmarkQuote/no_quote/std-1000000-16      	     224	   5320403 ns/op
+BenchmarkQuote/no_quote/sonic-10000000-16   	    1417	    850892 ns/op
+BenchmarkQuote/no_quote/std-10000000-16     	      21	  53229141 ns/op
+BenchmarkQuote/no_quote/sonic-100000000-16  	     128	   9254523 ns/op
+BenchmarkQuote/no_quote/std-100000000-16    	       2	 543581155 ns/op
+BenchmarkQuote/no_quote/sonic-1000000000-16 	      10	 104686251 ns/op
+BenchmarkQuote/no_quote/std-1000000000-16   	       1	5328983225 ns/op
+BenchmarkQuote/1/10_quote/sonic-10-16       	39378640	        30.48 ns/op
+BenchmarkQuote/1/10_quote/std-10-16         	16978284	        70.98 ns/op
+BenchmarkQuote/1/10_quote/sonic-100-16      	 9032550	       132.4 ns/op
+BenchmarkQuote/1/10_quote/std-100-16        	 1773364	       673.9 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000-16     	  967504	      1243 ns/op
+BenchmarkQuote/1/10_quote/std-1000-16       	  179144	      6691 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000-16    	   97165	     12350 ns/op
+BenchmarkQuote/1/10_quote/std-10000-16      	   18098	     66076 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000-16   	    9673	    123753 ns/op
+BenchmarkQuote/1/10_quote/std-100000-16     	    1800	    663516 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000-16  	     968	   1234663 ns/op
+BenchmarkQuote/1/10_quote/std-1000000-16    	     181	   6613013 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000000-16 	      82	  14290632 ns/op
+BenchmarkQuote/1/10_quote/std-10000000-16   	      16	  67208655 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000000-16         	       7	 152771847 ns/op
+BenchmarkQuote/1/10_quote/std-100000000-16           	       2	 683261576 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000000-16        	       1	1994911356 ns/op
+BenchmarkQuote/1/10_quote/std-1000000000-16          	       1	6727397174 ns/op
+BenchmarkQuote/1/5_quote/sonic-10-16                 	36187892	        34.08 ns/op
+BenchmarkQuote/1/5_quote/std-10-16                   	15643708	        76.50 ns/op
+BenchmarkQuote/1/5_quote/sonic-100-16                	 4745532	       253.7 ns/op
+BenchmarkQuote/1/5_quote/std-100-16                  	 2076807	       577.2 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000-16               	  482029	      2491 ns/op
+BenchmarkQuote/1/5_quote/std-1000-16                 	  211396	      5667 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000-16              	   48082	     24953 ns/op
+BenchmarkQuote/1/5_quote/std-10000-16                	   21220	     57479 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000-16             	    4798	    249967 ns/op
+BenchmarkQuote/1/5_quote/std-100000-16               	    2120	    565892 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000-16            	     480	   2490771 ns/op
+BenchmarkQuote/1/5_quote/std-1000000-16              	     205	   5667789 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000000-16           	      37	  28103465 ns/op
+BenchmarkQuote/1/5_quote/std-10000000-16             	      19	  58025039 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000000-16          	       4	 302102541 ns/op
+BenchmarkQuote/1/5_quote/std-100000000-16            	       2	 595661014 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000000-16         	       1	3359915201 ns/op
+BenchmarkQuote/1/5_quote/std-1000000000-16           	       1	5881061626 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	101.925s
+
+BenchmarkQuote/no_quote/sonic-10-16         	39531008	        30.54 ns/op
+BenchmarkQuote/no_quote/std-10-16           	17851966	        66.94 ns/op
+BenchmarkQuote/no_quote/sonic-100-16        	36886940	        31.84 ns/op
+BenchmarkQuote/no_quote/std-100-16          	 2195001	       547.8 ns/op
+BenchmarkQuote/no_quote/sonic-1000-16       	11496963	       104.5 ns/op
+BenchmarkQuote/no_quote/std-1000-16         	  224617	      5344 ns/op
+BenchmarkQuote/no_quote/sonic-10000-16      	 1496540	       801.3 ns/op
+BenchmarkQuote/no_quote/std-10000-16        	   22497	     53315 ns/op
+BenchmarkQuote/no_quote/sonic-100000-16     	  153021	      7847 ns/op
+BenchmarkQuote/no_quote/std-100000-16       	    2236	    534850 ns/op
+BenchmarkQuote/no_quote/sonic-1000000-16    	   14991	     78271 ns/op
+BenchmarkQuote/no_quote/std-1000000-16      	     224	   5319351 ns/op
+BenchmarkQuote/no_quote/sonic-10000000-16   	    1426	    841783 ns/op
+BenchmarkQuote/no_quote/std-10000000-16     	      21	  53241687 ns/op
+BenchmarkQuote/no_quote/sonic-100000000-16  	     129	   9581967 ns/op
+BenchmarkQuote/no_quote/std-100000000-16    	       2	 544298638 ns/op
+BenchmarkQuote/no_quote/sonic-1000000000-16 	      10	 104151514 ns/op
+BenchmarkQuote/no_quote/std-1000000000-16   	       1	5344849718 ns/op
+BenchmarkQuote/1/10_quote/sonic-10-16       	38555064	        30.44 ns/op
+BenchmarkQuote/1/10_quote/std-10-16         	17017351	        69.61 ns/op
+BenchmarkQuote/1/10_quote/sonic-100-16      	 9101502	       132.0 ns/op
+BenchmarkQuote/1/10_quote/std-100-16        	 1785254	       667.8 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000-16     	  968298	      1243 ns/op
+BenchmarkQuote/1/10_quote/std-1000-16       	  180834	      6631 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000-16    	   96968	     12378 ns/op
+BenchmarkQuote/1/10_quote/std-10000-16      	   18094	     66546 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000-16   	    9660	    123750 ns/op
+BenchmarkQuote/1/10_quote/std-100000-16     	    1810	    663093 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000-16  	     972	   1235216 ns/op
+BenchmarkQuote/1/10_quote/std-1000000-16    	     181	   6591024 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000000-16 	      82	  14298718 ns/op
+BenchmarkQuote/1/10_quote/std-10000000-16   	      16	  67213231 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000000-16         	       7	 150969243 ns/op
+BenchmarkQuote/1/10_quote/std-100000000-16           	       2	 684063828 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000000-16        	       1	1985228013 ns/op
+BenchmarkQuote/1/10_quote/std-1000000000-16          	       1	6721957991 ns/op
+BenchmarkQuote/1/5_quote/sonic-10-16                 	35650318	        35.11 ns/op
+BenchmarkQuote/1/5_quote/std-10-16                   	15749426	        76.64 ns/op
+BenchmarkQuote/1/5_quote/sonic-100-16                	 4747113	       253.4 ns/op
+BenchmarkQuote/1/5_quote/std-100-16                  	 2042347	       577.6 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000-16               	  481203	      2493 ns/op
+BenchmarkQuote/1/5_quote/std-1000-16                 	  211701	      5755 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000-16              	   48086	     24944 ns/op
+BenchmarkQuote/1/5_quote/std-10000-16                	   21160	     56624 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000-16             	    4816	    249054 ns/op
+BenchmarkQuote/1/5_quote/std-100000-16               	    2053	    586073 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000-16            	     480	   2492327 ns/op
+BenchmarkQuote/1/5_quote/std-1000000-16              	     205	   5837720 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000000-16           	      37	  28165414 ns/op
+BenchmarkQuote/1/5_quote/std-10000000-16             	      19	  59059558 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000000-16          	       4	 301834335 ns/op
+BenchmarkQuote/1/5_quote/std-100000000-16            	       2	 586537636 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000000-16         	       1	3384147523 ns/op
+BenchmarkQuote/1/5_quote/std-1000000000-16           	       1	5901228048 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	101.897s
+
+BenchmarkQuote/no_quote/sonic-10-16         	39352310	        30.42 ns/op
+BenchmarkQuote/no_quote/std-10-16           	18023274	        66.91 ns/op
+BenchmarkQuote/no_quote/sonic-100-16        	36940551	        32.49 ns/op
+BenchmarkQuote/no_quote/std-100-16          	 2194027	       546.5 ns/op
+BenchmarkQuote/no_quote/sonic-1000-16       	11478223	       104.1 ns/op
+BenchmarkQuote/no_quote/std-1000-16         	  224524	      5335 ns/op
+BenchmarkQuote/no_quote/sonic-10000-16      	 1486605	       804.1 ns/op
+BenchmarkQuote/no_quote/std-10000-16        	   22472	     53345 ns/op
+BenchmarkQuote/no_quote/sonic-100000-16     	  152912	      7839 ns/op
+BenchmarkQuote/no_quote/std-100000-16       	    2245	    534284 ns/op
+BenchmarkQuote/no_quote/sonic-1000000-16    	   14395	     78877 ns/op
+BenchmarkQuote/no_quote/std-1000000-16      	     224	   5322039 ns/op
+BenchmarkQuote/no_quote/sonic-10000000-16   	    1394	    851121 ns/op
+BenchmarkQuote/no_quote/std-10000000-16     	      21	  53239684 ns/op
+BenchmarkQuote/no_quote/sonic-100000000-16  	     128	   9259934 ns/op
+BenchmarkQuote/no_quote/std-100000000-16    	       2	 544546364 ns/op
+BenchmarkQuote/no_quote/sonic-1000000000-16 	      10	 104418820 ns/op
+BenchmarkQuote/no_quote/std-1000000000-16   	       1	5336600427 ns/op
+BenchmarkQuote/1/10_quote/sonic-10-16       	38665635	        30.59 ns/op
+BenchmarkQuote/1/10_quote/std-10-16         	16810724	        70.49 ns/op
+BenchmarkQuote/1/10_quote/sonic-100-16      	 9020748	       131.0 ns/op
+BenchmarkQuote/1/10_quote/std-100-16        	 1782412	       673.4 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000-16     	  971197	      1241 ns/op
+BenchmarkQuote/1/10_quote/std-1000-16       	  179415	      6641 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000-16    	   97029	     12377 ns/op
+BenchmarkQuote/1/10_quote/std-10000-16      	   18060	     66636 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000-16   	    9704	    123461 ns/op
+BenchmarkQuote/1/10_quote/std-100000-16     	    1812	    662703 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000-16  	     966	   1234352 ns/op
+BenchmarkQuote/1/10_quote/std-1000000-16    	     180	   6620609 ns/op
+BenchmarkQuote/1/10_quote/sonic-10000000-16 	      82	  14345393 ns/op
+BenchmarkQuote/1/10_quote/std-10000000-16   	      16	  67330265 ns/op
+BenchmarkQuote/1/10_quote/sonic-100000000-16         	       7	 150849667 ns/op
+BenchmarkQuote/1/10_quote/std-100000000-16           	       2	 684422310 ns/op
+BenchmarkQuote/1/10_quote/sonic-1000000000-16        	       1	1997485630 ns/op
+BenchmarkQuote/1/10_quote/std-1000000000-16          	       1	6724451702 ns/op
+BenchmarkQuote/1/5_quote/sonic-10-16                 	35664412	        36.37 ns/op
+BenchmarkQuote/1/5_quote/std-10-16                   	15092804	        76.29 ns/op
+BenchmarkQuote/1/5_quote/sonic-100-16                	 4747690	       253.4 ns/op
+BenchmarkQuote/1/5_quote/std-100-16                  	 2077712	       578.8 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000-16               	  482100	      2487 ns/op
+BenchmarkQuote/1/5_quote/std-1000-16                 	  212022	      5654 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000-16              	   48193	     24900 ns/op
+BenchmarkQuote/1/5_quote/std-10000-16                	   21238	     56535 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000-16             	    4807	    249605 ns/op
+BenchmarkQuote/1/5_quote/std-100000-16               	    2090	    565998 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000-16            	     478	   2492338 ns/op
+BenchmarkQuote/1/5_quote/std-1000000-16              	     211	   5676034 ns/op
+BenchmarkQuote/1/5_quote/sonic-10000000-16           	      37	  28267843 ns/op
+BenchmarkQuote/1/5_quote/std-10000000-16             	      19	  57794623 ns/op
+BenchmarkQuote/1/5_quote/sonic-100000000-16          	       4	 301951511 ns/op
+BenchmarkQuote/1/5_quote/std-100000000-16            	       2	 587470665 ns/op
+BenchmarkQuote/1/5_quote/sonic-1000000000-16         	       1	3370311936 ns/op
+BenchmarkQuote/1/5_quote/std-1000000000-16           	       1	5728505467 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	101.590s
+
+test name                                mid 4(ns/op)                      avg(ns/op)
+---------------------------------------------------------------------------
+BenchmarkQuote/no_quote/sonic-10-16         30.420
+BenchmarkQuote/no_quote/std-10-16           66.808
+BenchmarkQuote/no_quote/sonic-100-16        32.265
+BenchmarkQuote/no_quote/std-100-16          546.625
+BenchmarkQuote/no_quote/sonic-1000-16       104.725
+BenchmarkQuote/no_quote/std-1000-16         5342.750
+BenchmarkQuote/no_quote/sonic-10000-16      803.750
+BenchmarkQuote/no_quote/std-10000-16        53329.500
+BenchmarkQuote/no_quote/sonic-100000-16     7839.500
+BenchmarkQuote/no_quote/std-100000-16       533321.250
+BenchmarkQuote/no_quote/sonic-1000000-16    78469.000
+BenchmarkQuote/no_quote/std-1000000-16      5321105.000
+BenchmarkQuote/no_quote/sonic-10000000-16    842487.250
+BenchmarkQuote/no_quote/std-10000000-16     53233182.750
+BenchmarkQuote/no_quote/sonic-100000000-16    9258115.750
+BenchmarkQuote/no_quote/std-100000000-16    544433854.250
+BenchmarkQuote/no_quote/sonic-1000000000-16    105226922.500
+BenchmarkQuote/no_quote/std-1000000000-16    5336573325.500
+BenchmarkQuote/1/10_quote/sonic-10-16       30.500
+BenchmarkQuote/1/10_quote/std-10-16         70.583
+BenchmarkQuote/1/10_quote/sonic-100-16      132.275
+BenchmarkQuote/1/10_quote/std-100-16        673.875
+BenchmarkQuote/1/10_quote/sonic-1000-16     1242.250
+BenchmarkQuote/1/10_quote/std-1000-16       6645.000
+BenchmarkQuote/1/10_quote/sonic-10000-16    12374.250
+BenchmarkQuote/1/10_quote/std-10000-16      66387.500
+BenchmarkQuote/1/10_quote/sonic-100000-16    123677.000
+BenchmarkQuote/1/10_quote/std-100000-16     662592.750
+BenchmarkQuote/1/10_quote/sonic-1000000-16    1234652.250
+BenchmarkQuote/1/10_quote/std-1000000-16    6612358.250
+BenchmarkQuote/1/10_quote/sonic-10000000-16    14317318.000
+BenchmarkQuote/1/10_quote/std-10000000-16    67225727.500
+BenchmarkQuote/1/10_quote/sonic-100000000-16    151854794.750
+BenchmarkQuote/1/10_quote/std-100000000-16    683981260.250
+BenchmarkQuote/1/10_quote/sonic-1000000000-16    1994771384.000
+BenchmarkQuote/1/10_quote/std-1000000000-16    6725967777.250
+BenchmarkQuote/1/5_quote/sonic-10-16        34.335
+BenchmarkQuote/1/5_quote/std-10-16          76.370
+BenchmarkQuote/1/5_quote/sonic-100-16       253.150
+BenchmarkQuote/1/5_quote/std-100-16         578.100
+BenchmarkQuote/1/5_quote/sonic-1000-16      2491.000
+BenchmarkQuote/1/5_quote/std-1000-16        5685.500
+BenchmarkQuote/1/5_quote/sonic-10000-16     24936.750
+BenchmarkQuote/1/5_quote/std-10000-16       56605.000
+BenchmarkQuote/1/5_quote/sonic-100000-16    249582.500
+BenchmarkQuote/1/5_quote/std-100000-16      567994.000
+BenchmarkQuote/1/5_quote/sonic-1000000-16    2490835.750
+BenchmarkQuote/1/5_quote/std-1000000-16     5664630.000
+BenchmarkQuote/1/5_quote/sonic-10000000-16    28115338.500
+BenchmarkQuote/1/5_quote/std-10000000-16    57904305.500
+BenchmarkQuote/1/5_quote/sonic-100000000-16    302619693.500
+BenchmarkQuote/1/5_quote/std-100000000-16    592827563.000
+BenchmarkQuote/1/5_quote/sonic-1000000000-16    3375525560.750
+BenchmarkQuote/1/5_quote/std-1000000000-16    5798142658.750

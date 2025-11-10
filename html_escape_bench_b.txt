@@ -1,0 +1,93 @@
+html_escape_B
+
+BenchmarkHTMLEscape_Sonic-16     	  206319	      5791 ns/op	2250.92 MB/s
+BenchmarkHTMLEscape_StdLib-16    	   33645	     35711 ns/op	 365.01 MB/s
+PASS
+ok  	github.com/bytedance/sonic/encoder	2.836s
+BenchmarkHTMLEscape_Sonic-16     	  208755	      5739 ns/op	2271.24 MB/s
+BenchmarkHTMLEscape_StdLib-16    	   32500	     36838 ns/op	 353.85 MB/s
+PASS
+ok  	github.com/bytedance/sonic/encoder	2.847s
+BenchmarkHTMLEscape_Sonic-16     	  211729	      5722 ns/op	2278.15 MB/s
+BenchmarkHTMLEscape_StdLib-16    	   32419	     36366 ns/op	 358.44 MB/s
+PASS
+ok  	github.com/bytedance/sonic/encoder	2.843s
+BenchmarkHTMLEscape_Sonic-16     	  212295	      5717 ns/op	2280.11 MB/s
+BenchmarkHTMLEscape_StdLib-16    	   33438	     36152 ns/op	 360.56 MB/s
+PASS
+ok  	github.com/bytedance/sonic/encoder	2.863s
+BenchmarkHTMLEscape_Sonic-16     	  210398	      5767 ns/op	2260.18 MB/s
+BenchmarkHTMLEscape_StdLib-16    	   33091	     36446 ns/op	 357.66 MB/s
+PASS
+ok  	github.com/bytedance/sonic/encoder	2.865s
+BenchmarkHTMLEscape_Sonic-16     	  203782	      5986 ns/op	2177.52 MB/s
+BenchmarkHTMLEscape_StdLib-16    	   31416	     37104 ns/op	 351.31 MB/s
+PASS
+ok  	github.com/bytedance/sonic/encoder	2.851s
+BenchmarkHTMLEscape_Sonic-16     	  210466	      5684 ns/op	2293.24 MB/s
+BenchmarkHTMLEscape_StdLib-16    	   33278	     36404 ns/op	 358.07 MB/s
+PASS
+ok  	github.com/bytedance/sonic/encoder	2.851s
+BenchmarkHTMLEscape_Sonic-16     	  211869	      5702 ns/op	2286.05 MB/s
+BenchmarkHTMLEscape_StdLib-16    	   32991	     36761 ns/op	 354.59 MB/s
+PASS
+ok  	github.com/bytedance/sonic/encoder	2.866s
+RESULT
+BenchmarkHTMLEscape_Sonic-16                5736.250
+BenchmarkHTMLEscape_StdLib-16               36494.250
+
+BenchmarkEscapeHTML/small/sonic-16   	27886872	        42.94 ns/op
+BenchmarkEscapeHTML/small/std-16     	17699852	        68.17 ns/op
+BenchmarkEscapeHTML/large/sonic-16   	 1000000	      1145 ns/op
+BenchmarkEscapeHTML/large/std-16     	  126733	      9475 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	4.983s
+BenchmarkEscapeHTML/small/sonic-16   	27992566	        43.02 ns/op
+BenchmarkEscapeHTML/small/std-16     	18009424	        67.63 ns/op
+BenchmarkEscapeHTML/large/sonic-16   	 1000000	      1142 ns/op
+BenchmarkEscapeHTML/large/std-16     	  126588	      9464 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	4.992s
+BenchmarkEscapeHTML/small/sonic-16   	27776440	        43.10 ns/op
+BenchmarkEscapeHTML/small/std-16     	17415859	        68.41 ns/op
+BenchmarkEscapeHTML/large/sonic-16   	 1000000	      1144 ns/op
+BenchmarkEscapeHTML/large/std-16     	  126756	      9485 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	4.969s
+BenchmarkEscapeHTML/small/sonic-16   	27828644	        42.98 ns/op
+BenchmarkEscapeHTML/small/std-16     	17449688	        68.92 ns/op
+BenchmarkEscapeHTML/large/sonic-16   	 1000000	      1150 ns/op
+BenchmarkEscapeHTML/large/std-16     	  126585	      9464 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	4.979s
+BenchmarkEscapeHTML/small/sonic-16   	27796251	        43.02 ns/op
+BenchmarkEscapeHTML/small/std-16     	17739558	        68.04 ns/op
+BenchmarkEscapeHTML/large/sonic-16   	 1000000	      1149 ns/op
+BenchmarkEscapeHTML/large/std-16     	  126579	      9473 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	4.984s
+BenchmarkEscapeHTML/small/sonic-16   	27761299	        43.09 ns/op
+BenchmarkEscapeHTML/small/std-16     	17959398	        68.25 ns/op
+BenchmarkEscapeHTML/large/sonic-16   	 1000000	      1145 ns/op
+BenchmarkEscapeHTML/large/std-16     	  126753	      9485 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	5.001s
+BenchmarkEscapeHTML/small/sonic-16   	27798068	        43.10 ns/op
+BenchmarkEscapeHTML/small/std-16     	17683833	        68.57 ns/op
+BenchmarkEscapeHTML/large/sonic-16   	 1000000	      1146 ns/op
+BenchmarkEscapeHTML/large/std-16     	  126550	      9461 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	4.985s
+BenchmarkEscapeHTML/small/sonic-16   	27680647	        43.06 ns/op
+BenchmarkEscapeHTML/small/std-16     	17895390	        69.20 ns/op
+BenchmarkEscapeHTML/large/sonic-16   	 1000000	      1146 ns/op
+BenchmarkEscapeHTML/large/std-16     	  126771	      9495 ns/op
+PASS
+ok  	github.com/bytedance/sonic/internal/encoder/alg	5.013s
+
+test name                                mid 4(ns/op)                      avg(ns/op)
+---------------------------------------------------------------------------
+BenchmarkEscapeHTML/small/sonic-16          43.048
+BenchmarkEscapeHTML/small/std-16            68.350
+BenchmarkEscapeHTML/large/sonic-16          1145.500
+BenchmarkEscapeHTML/large/std-16            9474.250

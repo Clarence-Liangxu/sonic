@@ -1,0 +1,106 @@
+pkg: github.com/bytedance/sonic/ast
+BenchmarkParser_Sonic-16                  	  179044	      6710 ns/op	1940.74 MB/s
+BenchmarkParser_Parallel_Sonic-16         	 1888830	       637.3 ns/op	20433.61 MB/s
+BenchmarkParseEmpty_Sonic-16              	  588927	      1943 ns/op	6702.02 MB/s
+BenchmarkParseOne_Sonic-16                	   80270	     15070 ns/op	 864.18 MB/s
+BenchmarkParseOne_Parallel_Sonic-16       	  777651	      1526 ns/op	8535.66 MB/s
+BenchmarkParseNoLazy_Sonic-16             	28682462	        40.67 ns/op	320173.18 MB/s
+BenchmarkParseNoLazy_Parallel_Sonic-16    	268284913	         3.937 ns/op	3307853.70 MB/s
+BenchmarkParseSeven_Sonic-16              	   40729	     29377 ns/op	 443.31 MB/s
+BenchmarkParseSeven_Parallel_Sonic-16     	  366282	      3332 ns/op	3908.67 MB/s
+PASS
+ok  	github.com/bytedance/sonic/ast	12.857s
+
+BenchmarkParser_Sonic-16                  	  184089	      6885 ns/op	1891.61 MB/s
+BenchmarkParser_Parallel_Sonic-16         	 1858574	       645.0 ns/op	20192.26 MB/s
+BenchmarkParseEmpty_Sonic-16              	  540490	      2221 ns/op	5862.31 MB/s
+BenchmarkParseOne_Sonic-16                	   74469	     15402 ns/op	 845.55 MB/s
+BenchmarkParseOne_Parallel_Sonic-16       	  782790	      1538 ns/op	8467.85 MB/s
+BenchmarkParseNoLazy_Sonic-16             	30263872	        39.68 ns/op	328161.78 MB/s
+BenchmarkParseNoLazy_Parallel_Sonic-16    	143368422	         8.518 ns/op	1528840.63 MB/s
+BenchmarkParseSeven_Sonic-16              	   43238	     27391 ns/op	 475.46 MB/s
+BenchmarkParseSeven_Parallel_Sonic-16     	  339914	      3364 ns/op	3871.31 MB/s
+PASS
+ok  	github.com/bytedance/sonic/ast	13.400s
+
+BenchmarkParser_Sonic-16                  	  184671	      6612 ns/op	1969.68 MB/s
+BenchmarkParser_Parallel_Sonic-16         	 1857712	       636.0 ns/op	20477.43 MB/s
+BenchmarkParseEmpty_Sonic-16              	  579878	      2024 ns/op	6432.73 MB/s
+BenchmarkParseOne_Sonic-16                	   77221	     15534 ns/op	 838.33 MB/s
+BenchmarkParseOne_Parallel_Sonic-16       	  770176	      1507 ns/op	8639.66 MB/s
+BenchmarkParseNoLazy_Sonic-16             	28490470	        40.54 ns/op	321245.46 MB/s
+BenchmarkParseNoLazy_Parallel_Sonic-16    	139459419	         9.025 ns/op	1442920.62 MB/s
+BenchmarkParseSeven_Sonic-16              	   43502	     26879 ns/op	 484.51 MB/s
+BenchmarkParseSeven_Parallel_Sonic-16     	  364310	      3347 ns/op	3890.48 MB/s
+PASS
+ok  	github.com/bytedance/sonic/ast	13.388s
+BenchmarkParser_Sonic-16                  	  176582	      6762 ns/op	1925.93 MB/s
+BenchmarkParser_Parallel_Sonic-16         	 1900044	       632.7 ns/op	20584.01 MB/s
+BenchmarkParseEmpty_Sonic-16              	  552826	      2003 ns/op	6502.79 MB/s
+BenchmarkParseOne_Sonic-16                	   77623	     15622 ns/op	 833.65 MB/s
+BenchmarkParseOne_Parallel_Sonic-16       	  740955	      1508 ns/op	8638.31 MB/s
+BenchmarkParseNoLazy_Sonic-16             	29331711	        40.22 ns/op	323820.32 MB/s
+BenchmarkParseNoLazy_Parallel_Sonic-16    	210724825	         5.575 ns/op	2335885.04 MB/s
+BenchmarkParseSeven_Sonic-16              	   44427	     27481 ns/op	 473.89 MB/s
+BenchmarkParseSeven_Parallel_Sonic-16     	  349864	      3297 ns/op	3949.46 MB/s
+PASS
+ok  	github.com/bytedance/sonic/ast	12.907s
+
+BenchmarkParser_Sonic-16                  	  184360	      6738 ns/op	1932.73 MB/s
+BenchmarkParser_Parallel_Sonic-16         	 1893600	       641.8 ns/op	20290.33 MB/s
+BenchmarkParseEmpty_Sonic-16              	  594805	      1949 ns/op	6682.62 MB/s
+BenchmarkParseOne_Sonic-16                	   81098	     15208 ns/op	 856.33 MB/s
+BenchmarkParseOne_Parallel_Sonic-16       	  752970	      1504 ns/op	8660.68 MB/s
+BenchmarkParseNoLazy_Sonic-16             	29910163	        40.20 ns/op	323993.86 MB/s
+BenchmarkParseNoLazy_Parallel_Sonic-16    	304281681	         8.428 ns/op	1545194.37 MB/s
+BenchmarkParseSeven_Sonic-16              	   44780	     26477 ns/op	 491.86 MB/s
+BenchmarkParseSeven_Parallel_Sonic-16     	  356892	      3317 ns/op	3926.36 MB/s
+PASS
+ok  	github.com/bytedance/sonic/ast	15.288s
+
+BenchmarkParser_Sonic-16                  	  179569	      6913 ns/op	1883.84 MB/s
+BenchmarkParser_Parallel_Sonic-16         	 1854664	       649.0 ns/op	20065.48 MB/s
+BenchmarkParseEmpty_Sonic-16              	  598201	      2014 ns/op	6466.33 MB/s
+BenchmarkParseOne_Sonic-16                	   77004	     15736 ns/op	 827.57 MB/s
+BenchmarkParseOne_Parallel_Sonic-16       	  752028	      1554 ns/op	8377.74 MB/s
+BenchmarkParseNoLazy_Sonic-16             	29798642	        40.65 ns/op	320348.02 MB/s
+BenchmarkParseNoLazy_Parallel_Sonic-16    	293796460	         4.057 ns/op	3210132.17 MB/s
+BenchmarkParseSeven_Sonic-16              	   43843	     27536 ns/op	 472.95 MB/s
+BenchmarkParseSeven_Parallel_Sonic-16     	  352537	      3460 ns/op	3763.86 MB/s
+PASS
+ok  	github.com/bytedance/sonic/ast	13.070s
+BenchmarkParser_Sonic-16                  	  179902	      6749 ns/op	1929.62 MB/s
+BenchmarkParser_Parallel_Sonic-16         	 1917345	       626.3 ns/op	20791.95 MB/s
+BenchmarkParseEmpty_Sonic-16              	  536694	      2151 ns/op	6054.64 MB/s
+BenchmarkParseOne_Sonic-16                	   72537	     15389 ns/op	 846.25 MB/s
+BenchmarkParseOne_Parallel_Sonic-16       	  867199	      1471 ns/op	8853.09 MB/s
+BenchmarkParseNoLazy_Sonic-16             	29572466	        40.30 ns/op	323161.46 MB/s
+BenchmarkParseNoLazy_Parallel_Sonic-16    	304260717	         3.941 ns/op	3304456.73 MB/s
+BenchmarkParseSeven_Sonic-16              	   43206	     27521 ns/op	 473.20 MB/s
+BenchmarkParseSeven_Parallel_Sonic-16     	  368365	      3238 ns/op	4022.11 MB/s
+PASS
+ok  	github.com/bytedance/sonic/ast	12.929s
+
+BenchmarkParser_Sonic-16                  	  172154	      6872 ns/op	1894.99 MB/s
+BenchmarkParser_Parallel_Sonic-16         	 1908758	       630.1 ns/op	20667.88 MB/s
+BenchmarkParseEmpty_Sonic-16              	  564657	      2206 ns/op	5904.35 MB/s
+BenchmarkParseOne_Sonic-16                	   70570	     16402 ns/op	 793.97 MB/s
+BenchmarkParseOne_Parallel_Sonic-16       	  744411	      1492 ns/op	8726.16 MB/s
+BenchmarkParseNoLazy_Sonic-16             	28947636	        40.88 ns/op	318555.91 MB/s
+BenchmarkParseNoLazy_Parallel_Sonic-16    	268722728	         4.402 ns/op	2958485.13 MB/s
+BenchmarkParseSeven_Sonic-16              	   41739	     28037 ns/op	 464.50 MB/s
+BenchmarkParseSeven_Parallel_Sonic-16     	  374456	      3197 ns/op	4073.27 MB/s
+PASS
+ok  	github.com/bytedance/sonic/ast	12.885s
+
+test name                                mid 4(ns/op)                      avg(ns/op)
+---------------------------------------------------------------------------
+BenchmarkParser_Sonic-16                    6780.250
+BenchmarkParser_Parallel_Sonic-16           636.950
+BenchmarkParseEmpty_Sonic-16                2048.000
+BenchmarkParseOne_Sonic-16                  15486.750
+BenchmarkParseOne_Parallel_Sonic-16         1511.250
+BenchmarkParseNoLazy_Sonic-16               40.428
+BenchmarkParseNoLazy_Parallel_Sonic-16      5.615
+BenchmarkParseSeven_Sonic-16                27482.250
+BenchmarkParseSeven_Parallel_Sonic-16       3323.250

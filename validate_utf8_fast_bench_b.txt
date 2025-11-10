@@ -1,0 +1,73 @@
+BenchmarkValidate/Sonic_ValidAscii-16         	19652910	        63.15 ns/op
+BenchmarkValidate/StdLib_ValidAscii-16        	 9462435	       127.0 ns/op
+BenchmarkValidate/Sonic_ValidUTF8-16          	  346952	      3464 ns/op
+BenchmarkValidate/StdLib_ValidUTF8-16         	  279324	      4271 ns/op
+BenchmarkValidate/Sonic_RandomBytes-16        	 3896622	       308.2 ns/op
+BenchmarkValidate/StdLib_RandomBytes-16       	430664930	         2.780 ns/op
+PASS
+ok  	github.com/bytedance/sonic/utf8	8.147s
+BenchmarkValidate/Sonic_ValidAscii-16         	20852188	        58.40 ns/op
+BenchmarkValidate/StdLib_ValidAscii-16        	 9420285	       127.3 ns/op
+BenchmarkValidate/Sonic_ValidUTF8-16          	  369518	      3235 ns/op
+BenchmarkValidate/StdLib_ValidUTF8-16         	  285765	      4216 ns/op
+BenchmarkValidate/Sonic_RandomBytes-16        	 3867354	       304.9 ns/op
+BenchmarkValidate/StdLib_RandomBytes-16       	429764814	         2.790 ns/op
+PASS
+ok  	github.com/bytedance/sonic/utf8	8.102s
+BenchmarkValidate/Sonic_ValidAscii-16         	20868816	        58.17 ns/op
+BenchmarkValidate/StdLib_ValidAscii-16        	 9432884	       127.4 ns/op
+BenchmarkValidate/Sonic_ValidUTF8-16          	  374762	      3239 ns/op
+BenchmarkValidate/StdLib_ValidUTF8-16         	  282433	      4237 ns/op
+BenchmarkValidate/Sonic_RandomBytes-16        	 3878367	       317.8 ns/op
+BenchmarkValidate/StdLib_RandomBytes-16       	335656737	         3.576 ns/op
+PASS
+ok  	github.com/bytedance/sonic/utf8	8.241s
+BenchmarkValidate/Sonic_ValidAscii-16         	20747812	        60.92 ns/op
+BenchmarkValidate/StdLib_ValidAscii-16        	 9422329	       127.5 ns/op
+BenchmarkValidate/Sonic_ValidUTF8-16          	  349866	      3417 ns/op
+BenchmarkValidate/StdLib_ValidUTF8-16         	  278143	      4279 ns/op
+BenchmarkValidate/Sonic_RandomBytes-16        	 3904375	       334.5 ns/op
+BenchmarkValidate/StdLib_RandomBytes-16       	192732698	         6.217 ns/op
+PASS
+ok  	github.com/bytedance/sonic/utf8	8.612s
+BenchmarkValidate/Sonic_ValidAscii-16         	20933467	        57.47 ns/op
+BenchmarkValidate/StdLib_ValidAscii-16        	 9407762	       127.3 ns/op
+BenchmarkValidate/Sonic_ValidUTF8-16          	  364392	      3294 ns/op
+BenchmarkValidate/StdLib_ValidUTF8-16         	  281456	      4261 ns/op
+BenchmarkValidate/Sonic_RandomBytes-16        	 3931987	       313.7 ns/op
+BenchmarkValidate/StdLib_RandomBytes-16       	308190624	         3.867 ns/op
+PASS
+ok  	github.com/bytedance/sonic/utf8	8.240s
+BenchmarkValidate/Sonic_ValidAscii-16         	20904692	        60.76 ns/op
+BenchmarkValidate/StdLib_ValidAscii-16        	 9428398	       127.3 ns/op
+BenchmarkValidate/Sonic_ValidUTF8-16          	  372606	      3218 ns/op
+BenchmarkValidate/StdLib_ValidUTF8-16         	  284527	      4216 ns/op
+BenchmarkValidate/Sonic_RandomBytes-16        	 3821906	       306.0 ns/op
+BenchmarkValidate/StdLib_RandomBytes-16       	336548584	         3.570 ns/op
+PASS
+ok  	github.com/bytedance/sonic/utf8	8.228s
+BenchmarkValidate/Sonic_ValidAscii-16         	19805288	        61.66 ns/op
+BenchmarkValidate/StdLib_ValidAscii-16        	 9419988	       127.3 ns/op
+BenchmarkValidate/Sonic_ValidUTF8-16          	  375045	      3195 ns/op
+BenchmarkValidate/StdLib_ValidUTF8-16         	  284979	      4211 ns/op
+BenchmarkValidate/Sonic_RandomBytes-16        	 3614126	       312.5 ns/op
+BenchmarkValidate/StdLib_RandomBytes-16       	266776814	         4.496 ns/op
+PASS
+ok  	github.com/bytedance/sonic/utf8	8.251s
+BenchmarkValidate/Sonic_ValidAscii-16         	20958142	        60.38 ns/op
+BenchmarkValidate/StdLib_ValidAscii-16        	 9458901	       126.8 ns/op
+BenchmarkValidate/Sonic_ValidUTF8-16          	  361952	      3209 ns/op
+BenchmarkValidate/StdLib_ValidUTF8-16         	  282013	      4231 ns/op
+BenchmarkValidate/Sonic_RandomBytes-16        	 3948682	       305.1 ns/op
+BenchmarkValidate/StdLib_RandomBytes-16       	429478702	         2.786 ns/op
+PASS
+ok  	github.com/bytedance/sonic/utf8	8.123s
+
+test name                                mid 4(ns/op)                      avg(ns/op)
+---------------------------------------------------------------------------
+BenchmarkValidate/Sonic_ValidAscii-16       60.115
+BenchmarkValidate/StdLib_ValidAscii-16      127.300
+BenchmarkValidate/Sonic_ValidUTF8-16        3246.500
+BenchmarkValidate/StdLib_ValidUTF8-16       4236.250
+BenchmarkValidate/Sonic_RandomBytes-16      310.100
+BenchmarkValidate/StdLib_RandomBytes-16     3.451
