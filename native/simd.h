@@ -127,7 +127,7 @@ static inline v256u v256_splat(uint8_t ch) {
 }
 
 static inline uint32_t mask256_tobitmask(mask256 mask) {
-    svbool_t result = svcmpeq_n_u8(svptrue_b8(), mask, 0x80);
+    svbool_t result = svcmpge_n_u8(svptrue_b8(), mask, 0x80);
     return *((uint32_t *)&result);
 }
 static inline mask256 mask256_and(mask256 mask1, mask256 mask2) {
@@ -167,7 +167,7 @@ static inline mask256 v256_le(const v256u v1, const v256u v2) {
     return (mask256){ v128_le(v1.lo, v2.lo), v128_le(v1.hi, v2.hi)};
 }
 
-static inline mask256 v256_gt(const v256u v1, const v256u v2) {
+static mask256 v256_gt(const v256u v1, const v256u v2) {
     return (mask256){ v128_gt(v1.lo, v2.lo), v128_gt(v1.hi, v2.hi)};
 }
 
@@ -175,7 +175,7 @@ static inline v256u v256_splat(uint8_t ch) {
     return (v256u){v128_splat(ch), v128_splat(ch)};
 }
 
-static inline uint32_t mask256_tobitmask(mask256 mask) {
+static uint32_t mask256_tobitmask(mask256 mask) {
     uint32_t lo = mask128_tobitmask(mask.lo);
     uint32_t hi = mask128_tobitmask(mask.hi);
     return lo | (hi << 16);

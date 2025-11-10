@@ -524,12 +524,12 @@ static always_inline svuint8_t simd256_lookup16(const svuint8_t input, const uin
       static always_inline  svuint8_t is_incomplete(const svuint8_t input) {
     // If the previous input's last 3 bytes match this, they're too short (they ended at EOF):
     // ... 1111____ 111_____ 11______
-      const uint8_t tab[32] = {
+      static const uint8_t incom_tab[32] = {
       255, 255, 255, 255, 255, 255, 255, 255,
       255, 255, 255, 255, 255, 255, 255, 255,
       255, 255, 255, 255, 255, 255, 255, 255,
       255, 255, 255, 255, 255, 0b11110000u-1, 0b11100000u-1, 0b11000000u-1};
-        const svuint8_t max_value = svld1_u8(svptrue_b8(), &tab[0]);
+        const svuint8_t max_value = svld1_u8(svptrue_b8(), incom_tab);
         return svsub_u8_z(svptrue_b8(), input, max_value);
     }
 
@@ -580,7 +580,7 @@ static always_inline svuint8_t simd256_lookup16(const svuint8_t input, const uin
     svuint8_t byte_1_high = simd256_lookup16(prev1_shr4, tab1);
     
 
-    const uint8_t CARRY = TOO_SHORT | TOO_LONG | TWO_CONTS; // These all have ____ in byte 1 .
+    static const uint8_t CARRY = TOO_SHORT | TOO_LONG | TWO_CONTS; // These all have ____ in byte 1 .
     svuint8_t prev1_low = svand_n_u8_z(svptrue_b8(), prev1, 0x0F);
     static const uint8_t tab2[16] = {
       // ____0000 ________
@@ -655,8 +655,7 @@ static always_inline svuint8_t simd256_lookup16(const svuint8_t input, const uin
         // (2, 3, 4-byte leads become large positive numbers instead of small negative numbers)
         svuint8_t prev1 = simd256_prev(input, prev_input, 1);
         svuint8_t sc    = check_special_cases(input, prev1);
-        svuint8_t ret  = check_multibyte_lengths(input, prev_input, sc);
-        return ret;
+        return check_multibyte_lengths(input, prev_input, sc);
     }
 
     static always_inline bool is_ascii(const svuint8_t input) {
@@ -682,11 +681,11 @@ static always_inline svuint8_t simd256_lookup16(const svuint8_t input, const uin
     }
 
     static always_inline void check64_utf(utf8_checker* checker, const uint8_t* start) {
-        svuint8_t input = svld1_u8(svptrue_b8(), start);
+        svuint8_t input1 = svld1_u8(svptrue_b8(), start);
         svuint8_t input2 = svld1_u8(svptrue_b8(), start + 32);
         // check utf-8 chars
-        svuint8_t error1 = check_utf8_bytes(input, svld1_u8(svptrue_b8(), checker->prev_input));
-        svuint8_t error2 = check_utf8_bytes(input2, input);
+        svuint8_t error1 = check_utf8_bytes(input1, svld1_u8(svptrue_b8(), checker->prev_input));
+        svuint8_t error2 = check_utf8_bytes(input2, input1);
         svst1_u8(svptrue_b8(),
 		 checker->err,
 		 svorr_u8_z(svptrue_b8(), svld1_u8(svptrue_b8(), checker->err), svorr_u8_z(svptrue_b8(), error1, error2)));
@@ -696,9 +695,9 @@ static always_inline svuint8_t simd256_lookup16(const svuint8_t input, const uin
 
     static always_inline void check64(utf8_checker *checker, const uint8_t* start) {
         // fast path for contiguous ASCII
-        svuint8_t input = svld1_u8(svptrue_b8(), start);
+        svuint8_t input1 = svld1_u8(svptrue_b8(), start);
         svuint8_t input2 = svld1_u8(svptrue_b8(), start + 32);
-        svuint8_t reducer = svorr_u8_z(svptrue_b8(), input, input2);
+        svuint8_t reducer = svorr_u8_z(svptrue_b8(), input1, input2);
         // check utf-8
         if (likely(is_ascii(reducer))) {
 	  svst1_u8(svptrue_b8(),
@@ -711,12 +710,12 @@ static always_inline svuint8_t simd256_lookup16(const svuint8_t input, const uin
 
     static always_inline void check128(utf8_checker *checker, const uint8_t* start) {
         // fast path for contiguous ASCII
-        svuint8_t input = svld1_u8(svptrue_b8(), start);
+        svuint8_t input1 = svld1_u8(svptrue_b8(), start);
         svuint8_t input2 = svld1_u8(svptrue_b8(), start + 32);
         svuint8_t input3 = svld1_u8(svptrue_b8(), start + 64);
         svuint8_t input4 = svld1_u8(svptrue_b8(), start + 96);
         
-        svuint8_t reducer1 = svorr_u8_z(svptrue_b8(), input, input2);
+        svuint8_t reducer1 = svorr_u8_z(svptrue_b8(), input1, input2);
         svuint8_t reducer2 = svorr_u8_z(svptrue_b8(), input3, input4);
         svuint8_t reducer  = svorr_u8_z(svptrue_b8(), reducer1, reducer2);
 

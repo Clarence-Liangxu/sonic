@@ -16,6 +16,9 @@
 
 #pragma once
 
+#if defined(__SVE__)
+    #include <arm_sve.h>
+#endif
 #include "native.h"
 #include "utf8.h"
 #include "utils.h"
@@ -23,11 +26,6 @@
 #include "lspace.h"
 #include "atof_native.h"
 #include "atof_eisel_lemire.h"
-
-#if defined(__SVE__)
-    #include <arm_sve.h>
-#endif
-
 
 static always_inline long skip_number_1(const GoString *src, long *p);
 static always_inline void vnumber_1(const GoString *src, long *p, JsonState *ret);
@@ -158,7 +156,7 @@ static always_inline ssize_t advance_string_default(const GoString *src, long p,
     sp += p;
     ep_init()
 
-#if USE_AVX2
+#if defined(USE_AVX2)
     /* initialize vectors */
     __m256i v0;
     __m256i v1;
@@ -224,7 +222,7 @@ static always_inline ssize_t advance_string_default(const GoString *src, long p,
 
     /* 64-byte SIMD loop */
     while (likely(nb >= 64)) {
-#if USE_AVX2
+#if defined(USE_AVX2)
         v0 = _mm256_loadu_si256   ((const void *)(sp +  0));
         v1 = _mm256_loadu_si256   ((const void *)(sp + 32));
         q0 = _mm256_cmpeq_epi8    (v0, cq);
@@ -296,7 +294,7 @@ static always_inline ssize_t advance_string_default(const GoString *src, long p,
 
     /* 32-byte SIMD round */
     if (likely(nb >= 32)) {
-#if USE_AVX2
+#if defined(USE_AVX2)
         v0 = _mm256_loadu_si256   ((const void *)sp);
         q0 = _mm256_cmpeq_epi8    (v0, cq);
         x0 = _mm256_cmpeq_epi8    (v0, cx);
@@ -382,7 +380,7 @@ static always_inline ssize_t advance_string_default(const GoString *src, long p,
     }
 }
 
-#if USE_AVX2
+#if defined(USE_AVX2)
 
 static always_inline int _mm256_get_mask(__m256i v, __m256i t) {
     return _mm256_movemask_epi8(_mm256_cmpeq_epi8(v, t));
@@ -533,7 +531,7 @@ static always_inline ssize_t advance_string_validate(const GoString *src, long p
     sp += p;
     ep_init()
 
-#if USE_AVX2
+#if defined(USE_AVX2)
     /* initialize vectors */
     __m256i v0;
     __m256i v1;
@@ -577,7 +575,7 @@ static always_inline ssize_t advance_string_validate(const GoString *src, long p
 
     /* 64-byte SIMD loop */
     while (likely(nb >= 64)) {
-#if USE_AVX2
+#if defined(USE_AVX2)
         v0 = _mm256_loadu_si256   ((const void *)(sp +  0));
         v1 = _mm256_loadu_si256   ((const void *)(sp + 32));
         s0 = _mm256_get_mask(v0, cq);
@@ -590,8 +588,8 @@ static always_inline ssize_t advance_string_validate(const GoString *src, long p
         m1 = ((uint64_t)t1 << 32) | (uint64_t)t0;
         m2 = ((uint64_t)c1 << 32) | (uint64_t)c0;
 #elif defined(__SVE__)
-        v0 = svld1_s8(svptrue_b8(), (const void *)(sp +  0));
-        v1 = svld1_s8(svptrue_b8(), (const void *)(sp + 32));
+        v0 = svld1_s8(svptrue_b8(), (const int8_t *)sp);
+        v1 = svld1_s8(svptrue_b8(), (const int8_t *)(sp + 32));
         s0 = _mm256_get_mask(v0, cq);
         s1 = _mm256_get_mask(v1, cq);
         t0 = _mm256_get_mask(v0, cx);
@@ -662,7 +660,7 @@ static always_inline ssize_t advance_string_validate(const GoString *src, long p
 
     /* 32-byte SIMD round */
     if (likely(nb >= 32)) {
-#if USE_AVX2
+#if defined(USE_AVX2)
         v0 = _mm256_loadu_si256   ((const void *)sp);
         s0 = _mm256_get_mask (v0, cq);
         t0 = _mm256_get_mask (v0, cx);
@@ -671,7 +669,7 @@ static always_inline ssize_t advance_string_validate(const GoString *src, long p
         m1 = (uint64_t)t0;
         m2 = (uint64_t)c0;
 #elif defined(__SVE__)
-        v0 = svld1_s8(svptrue_b8(), (const int8_t *)(sp));
+        v0 = svld1_s8(svptrue_b8(), (const int8_t *)sp);
         s0 = _mm256_get_mask (v0, cq);
         t0 = _mm256_get_mask (v0, cx);
         c0 = _mm256_cchars_mask(v0);
@@ -1123,7 +1121,7 @@ static always_inline long do_skip_number(const char *sp, size_t nb) {
         return 1;
     }
 
-#if USE_AVX2
+#if defined(USE_AVX2)
     /* can do with AVX-2 */
     if (likely(nb >= 32)) {
         __m256i d9 = _mm256_set1_epi8('9');
@@ -1447,7 +1445,7 @@ static always_inline long skip_number_1(const GoString *src, long *p) {
 }
 
 static always_inline uint64_t get_maskx64(const char *s, char c) {
-#if USE_AVX2
+#if defined(USE_AVX2)
     __m256i v0 = _mm256_loadu_si256((__m256i const *)s);
     __m256i v1 = _mm256_loadu_si256((__m256i const *)(s + 32));
     uint32_t m0 = _mm256_movemask_epi8(_mm256_cmpeq_epi8(v0, _mm256_set1_epi8(c)));
@@ -1476,7 +1474,7 @@ static always_inline uint64_t get_maskx64(const char *s, char c) {
 }
 
 static always_inline uint64_t get_maskx32(const char *s, char c) {
-#if USE_AVX2
+#if defined(USE_AVX2)
     __m256i v0 = _mm256_loadu_si256((__m256i const *)s);
     uint64_t m0 = (unsigned)_mm256_movemask_epi8(_mm256_cmpeq_epi8(v0, _mm256_set1_epi8(c)));
     return m0;
@@ -1525,7 +1523,7 @@ static always_inline uint64_t get_string_maskx64(const char *s, uint64_t *prev_i
 }
 
 // get the next json structural, '}', ']' or ','。
-#if USE_AVX2
+#if defined(USE_AVX2)
 static always_inline int get_structural_maskx32(const char *s) {
     __m256i v = _mm256_loadu_si256((const void *)s);
     __m256i e1 = _mm256_cmpeq_epi8(v, _mm256_set1_epi8('}'));
@@ -1573,7 +1571,7 @@ static always_inline long skip_number_fast(const GoString *src, long *p) {
     long vi = *p - 1;
     int m = 0;
 
-#if USE_AVX2
+#if defined(USE_AVX2)
     while (likely(nb >= 32)) {
         if ((m = get_structural_maskx32(s))) {
             *p = s - src->buf + __builtin_ctzll(m);
@@ -1760,7 +1758,7 @@ static always_inline int64_t get_int(const GoIface* iface) {
 // xmemcmpeq return true if s1 and s2 is equal for the n bytes, otherwise, return false.
 static always_inline bool xmemcmpeq(const char * s1, const char * s2, size_t n) {
     bool c1, c2;
-#if USE_AVX2
+#if defined(USE_AVX2)
     while (n >= 32) {
         __m256i  v1   = _mm256_loadu_si256((const void *)s1);
         __m256i  v2   = _mm256_loadu_si256((const void *)s2);
@@ -1799,8 +1797,7 @@ static always_inline bool xmemcmpeq(const char * s1, const char * s2, size_t n) 
         svint8_t v2   = svld1_s8(svptrue_b8(), (const int8_t *)s2);
         svbool_t pg1 = svcmpeq_s8(svptrue_b8(), v1, v2);
         uint32_t *p = (uint32_t *)&pg1;
-        uint32_t mask = ~(*p);
-        bool eq = (mask == 0) || (__builtin_ctzll(mask) >= n);
+        bool eq = (~(*p) == 0) || (__builtin_ctzll(~(*p)) >= n);
         return eq;
     }
 #endif

@@ -1,9 +1,9 @@
-#include "native.h"
-#include "simd.h"
-#include <stdint.h>
 #if defined(__SVE__)
 #include <arm_sve.h>
 #endif
+#include "native.h"
+#include "simd.h"
+#include <stdint.h>
 #include "parsing.h"
 #include "scanning.h"
 

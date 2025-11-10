@@ -16,12 +16,12 @@
 
 #pragma once
 
-#include "native.h"
-#include "utils.h"
-#include <stdint.h>
 #if defined(__SVE__)
 #include <arm_sve.h>
 #endif
+#include "native.h"
+#include "utils.h"
+#include <stdint.h>
 
 /** String Quoting **/
 #define MAX_ESCAPED_BYTES 8
@@ -165,7 +165,7 @@ static always_inline ssize_t memcchr_quote(const char *sp, ssize_t nb, char *dp,
 
         mm_sve = &rv;
         if ((*mm_sve) != 0) {
-            return sp - ss + __builtin_ctzll(*mm_sve);
+            return sp - ss + __builtin_ctz(*mm_sve);
         }
 
         sp += 32;
@@ -177,8 +177,9 @@ static always_inline ssize_t memcchr_quote(const char *sp, ssize_t nb, char *dp,
     if (nb >= 32) {
         svint8_t vv = svld1_s8(pg, (const int8_t *)sp);
         svbool_t rv = sve_find_quote(vv);
-        mm_sve = &rv;
-        uint32_t fv = __builtin_ctzll((uint64_t)(*mm_sve) | 0x0100000000);
+        uint32_t *mv = NULL;
+        mv = &rv;
+        uint32_t fv = __builtin_ctzll((uint64_t)(*mv) | 0x0100000000);
 
         if (fv <= dn) {
             memcpy_p32(dp, sp, fv);
@@ -188,7 +189,7 @@ static always_inline ssize_t memcchr_quote(const char *sp, ssize_t nb, char *dp,
             return -(sp - ss + dn) - 1;
         }
     }
-#elif USE_AVX2
+#elif defined(USE_AVX2)
     /* 32-byte loop, full store */
     while (nb >= 32 && dn >= 32) {
         __m256i vv = _mm256_loadu_si256  ((const void *)sp);
@@ -317,7 +318,7 @@ simd_copy:
 
         mm_sve = &rv;
         if ((*mm_sve) != 0) {
-            cn = __builtin_ctzll(*mm_sve);
+            cn = __builtin_ctz(*mm_sve);
             sp += cn;
             nb -= cn;
             dp += cn;
@@ -328,7 +329,7 @@ simd_copy:
         dp += 32;
         nb -= 32;
     }
-#elif USE_AVX2
+#elif defined(USE_AVX2)
     /* 32-byte loop, full store */
     while (nb >= 32) {
         __m256i vv = _mm256_loadu_si256  ((const void *)sp);
@@ -472,7 +473,7 @@ static always_inline ssize_t memcchr_p32(const char *s, ssize_t nb, char *p) {
     svbool_t pg = svptrue_b8();
     uint32_t *mm = NULL;
 
-    while (n >= 32) {
+    while (n > 32) {
         svint8_t u = svld1(pg, (const int8_t *)s);
         svbool_t v = svcmpeq_n_s8(pg, u, '\\');
         svst1(pg, (int8_t *)p, u);
@@ -487,7 +488,7 @@ static always_inline ssize_t memcchr_p32(const char *s, ssize_t nb, char *p) {
         p += 32;
         n -= 32;
     }
-#elif USE_AVX2
+#elif defined(USE_AVX2)
     __m256i u;
     __m256i v;
     __m256i b = _mm256_set1_epi8('\\');
@@ -602,7 +603,7 @@ static always_inline __m128i _mm_find_html(__m128i vv) {
     return rv;
 }
 
-#if USE_AVX2
+#if defined(USE_AVX2)
 static always_inline __m256i _mm256_find_html(__m256i vv) {
     __m256i e1 = _mm256_cmpeq_epi8   (vv, _mm256_set1_epi8('<'));
     __m256i e2 = _mm256_cmpeq_epi8   (vv, _mm256_set1_epi8('>'));
@@ -632,7 +633,7 @@ static always_inline ssize_t memcchr_html_quote(const char *sp, ssize_t nb, char
     uint32_t     mm;
     const char * ss = sp;
 
-#if USE_AVX2
+#if defined(USE_AVX2)
     /* 32-byte loop, full store */
     while (nb >= 32 && dn >= 32) {
         __m256i vv = _mm256_loadu_si256  ((const void *)sp);
@@ -681,7 +682,7 @@ static always_inline ssize_t memcchr_html_quote(const char *sp, ssize_t nb, char
 
         mm_sve = &rv;
         if ((*mm_sve) != 0) {
-            return sp - ss + __builtin_ctzll(*mm_sve);
+            return (sp - ss) + __builtin_ctz(*mm_sve);
         }
 
         sp += 32;
@@ -693,8 +694,9 @@ static always_inline ssize_t memcchr_html_quote(const char *sp, ssize_t nb, char
     if (nb >= 32) {
         svint8_t vv = svld1_s8(pg, (const int8_t *)sp);
         svbool_t rv = sve_find_html(vv);
-        mm_sve = &rv;
-        uint32_t fv = __builtin_ctzll((uint64_t)(*mm_sve) | 0x0100000000);
+        uint32_t* mv = NULL;
+        mv = &rv;
+        uint32_t fv = __builtin_ctzll((uint64_t)(*mv) | 0x0100000000);
 
         if (fv <= dn) {
             memcpy_p32(dp, sp, fv);
