@@ -51,7 +51,7 @@ static always_inline void memcpy32(void *__restrict dp, const void *__restrict s
 
 static always_inline void memcpy64(void *__restrict dp, const void *__restrict sp) {
 #if defined(__SVE__)
-    svstl_u8(svptrue_b8(), dp, svld1_u8(svptrue_b8(), sp));
+    svst1_u8(svptrue_b8(), dp, svld1_u8(svptrue_b8(), sp));
 #else
     memcpy32(dp, sp);
 #endif
