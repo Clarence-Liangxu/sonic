@@ -1,0 +1,100 @@
+Running benchmark 'BenchmarkHTMLEscape' in /home/user/test/ori/sonic/encoder, 8 times...
+result: BenchmarkHTMLEscape_result.txt
+test name                                mid 4(ns/op)                      avg(ns/op)
+---------------------------------------------------------------------------
+BenchmarkHTMLEscape_Sonic-16                6368.250
+BenchmarkHTMLEscape_StdLib-16               36248.250
+Finished benchmark 'BenchmarkHTMLEscape'. Results saved to BenchmarkHTMLEscape.txt
+Running benchmark 'BenchmarkEscapeHTML' in /home/user/test/ori/sonic/internal/encoder/alg, 8 times...
+result: BenchmarkEscapeHTML_result.txt
+test name                                mid 4(ns/op)                      avg(ns/op)
+---------------------------------------------------------------------------
+BenchmarkEscapeHTML/small/sonic-16          44.815
+BenchmarkEscapeHTML/small/std-16            67.763
+BenchmarkEscapeHTML/large/sonic-16          1420.750
+BenchmarkEscapeHTML/large/std-16            9482.000
+Finished benchmark 'BenchmarkEscapeHTML'. Results saved to BenchmarkEscapeHTML.txt
+Running benchmark 'BenchmarkQuote' in /home/user/test/ori/sonic/internal/encoder/alg, 8 times...
+result: BenchmarkQuote_result.txt
+test name                                mid 4(ns/op)                      avg(ns/op)
+---------------------------------------------------------------------------
+BenchmarkQuote/no_quote/sonic-10-16         35.153
+BenchmarkQuote/no_quote/std-10-16           66.737
+BenchmarkQuote/no_quote/sonic-100-16        38.858
+BenchmarkQuote/no_quote/std-100-16          546.125
+BenchmarkQuote/no_quote/sonic-1000-16       117.675
+BenchmarkQuote/no_quote/std-1000-16         5336.500
+BenchmarkQuote/no_quote/sonic-10000-16      896.500
+BenchmarkQuote/no_quote/std-10000-16        53262.250
+BenchmarkQuote/no_quote/sonic-100000-16     8685.750
+BenchmarkQuote/no_quote/std-100000-16       532358.000
+BenchmarkQuote/no_quote/sonic-1000000-16    86403.750
+BenchmarkQuote/no_quote/std-1000000-16      5321930.250
+BenchmarkQuote/no_quote/sonic-10000000-16    1062099.750
+BenchmarkQuote/no_quote/std-10000000-16     53206857.500
+BenchmarkQuote/no_quote/sonic-100000000-16    11480031.500
+BenchmarkQuote/no_quote/std-100000000-16    543353232.000
+BenchmarkQuote/no_quote/sonic-1000000000-16    129723825.000
+BenchmarkQuote/no_quote/std-1000000000-16    5345799947.250
+BenchmarkQuote/1/10_quote/sonic-10-16       34.243
+BenchmarkQuote/1/10_quote/std-10-16         70.438
+BenchmarkQuote/1/10_quote/sonic-100-16      128.350
+BenchmarkQuote/1/10_quote/std-100-16        672.700
+BenchmarkQuote/1/10_quote/sonic-1000-16     1235.000
+BenchmarkQuote/1/10_quote/std-1000-16       6647.000
+BenchmarkQuote/1/10_quote/sonic-10000-16    12137.750
+BenchmarkQuote/1/10_quote/std-10000-16      66334.250
+BenchmarkQuote/1/10_quote/sonic-100000-16    121232.750
+BenchmarkQuote/1/10_quote/std-100000-16     662304.250
+BenchmarkQuote/1/10_quote/sonic-1000000-16    1210059.250
+BenchmarkQuote/1/10_quote/std-1000000-16    6612815.250
+BenchmarkQuote/1/10_quote/sonic-10000000-16    13818789.250
+BenchmarkQuote/1/10_quote/std-10000000-16    67199017.000
+BenchmarkQuote/1/10_quote/sonic-100000000-16    145445563.750
+BenchmarkQuote/1/10_quote/std-100000000-16    684337153.500
+BenchmarkQuote/1/10_quote/sonic-1000000000-16    1946261405.500
+BenchmarkQuote/1/10_quote/std-1000000000-16    6731042667.500
+BenchmarkQuote/1/5_quote/sonic-10-16        36.522
+BenchmarkQuote/1/5_quote/std-10-16          76.330
+BenchmarkQuote/1/5_quote/sonic-100-16       252.000
+BenchmarkQuote/1/5_quote/std-100-16         579.200
+BenchmarkQuote/1/5_quote/sonic-1000-16      2449.250
+BenchmarkQuote/1/5_quote/std-1000-16        5689.500
+BenchmarkQuote/1/5_quote/sonic-10000-16     24429.000
+BenchmarkQuote/1/5_quote/std-10000-16       57125.750
+BenchmarkQuote/1/5_quote/sonic-100000-16    244210.500
+BenchmarkQuote/1/5_quote/std-100000-16      570143.000
+BenchmarkQuote/1/5_quote/sonic-1000000-16    2437702.750
+BenchmarkQuote/1/5_quote/std-1000000-16     5699583.500
+BenchmarkQuote/1/5_quote/sonic-10000000-16    27230488.000
+BenchmarkQuote/1/5_quote/std-10000000-16    58008943.500
+BenchmarkQuote/1/5_quote/sonic-100000000-16    293627594.250
+BenchmarkQuote/1/5_quote/std-100000000-16    593409916.500
+BenchmarkQuote/1/5_quote/sonic-1000000000-16    3276637910.500
+BenchmarkQuote/1/5_quote/std-1000000000-16    5765967345.000
+Finished benchmark 'BenchmarkQuote'. Results saved to BenchmarkQuote.txt
+Running benchmark 'BenchmarkValidate' in /home/user/test/ori/sonic/utf8, 8 times...
+result: BenchmarkValidate_result.txt
+test name                                mid 4(ns/op)                      avg(ns/op)
+---------------------------------------------------------------------------
+BenchmarkValidate/Sonic_ValidAscii-16       385.200
+BenchmarkValidate/StdLib_ValidAscii-16      127.325
+BenchmarkValidate/Sonic_ValidUTF8-16        1790.500
+BenchmarkValidate/StdLib_ValidUTF8-16       4252.250
+BenchmarkValidate/Sonic_RandomBytes-16      25.990
+BenchmarkValidate/StdLib_RandomBytes-16     2.795
+Finished benchmark 'BenchmarkValidate'. Results saved to BenchmarkValidate.txt
+Running benchmark 'BenchmarkParser*' in /home/user/test/ori/sonic/ast, 8 times...
+result: BenchmarkParser*_result.txt
+test name                                mid 4(ns/op)                      avg(ns/op)
+---------------------------------------------------------------------------
+BenchmarkParser_Sonic-16                    6900.250
+BenchmarkParser_Parallel_Sonic-16           645.400
+BenchmarkParseEmpty_Sonic-16                2032.500
+BenchmarkParseOne_Sonic-16                  15573.500
+BenchmarkParseOne_Parallel_Sonic-16         1525.750
+BenchmarkParseNoLazy_Sonic-16               40.680
+BenchmarkParseNoLazy_Parallel_Sonic-16      4.301
+BenchmarkParseSeven_Sonic-16                27645.000
+BenchmarkParseSeven_Parallel_Sonic-16       3361.000
+Finished benchmark 'BenchmarkParser*'. Results saved to BenchmarkParser*.txt
