@@ -1,0 +1,428 @@
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkGetOne_Sonic-16                 	 1000000	      2766 ns/op	4708.21 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Sonic-16             	 1000000	      2877 ns/op	4526.68 MB/s	      56 B/op	       2 allocs/op
+BenchmarkGetFull_Sonic-16                	 1000000	     11799 ns/op	1103.71 MB/s	       0 B/op	       0 allocs/op
+BenchmarkGetWithManyCompare_Sonic-16     	 1000000	      2863 ns/op	 244.89 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOne_Parallel_Sonic-16        	 1000000	       356.3 ns/op	36546.42 MB/s	      34 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Parallel_Sonic-16    	 1000000	       331.6 ns/op	39270.56 MB/s	      58 B/op	       2 allocs/op
+BenchmarkSetOne_Sonic-16                 	 1000000	      6985 ns/op	1864.40 MB/s	    1097 B/op	       3 allocs/op
+BenchmarkSetOne_Parallel_Sonic-16        	 1000000	       960.4 ns/op	13559.57 MB/s	    1223 B/op	       3 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	28.960s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkEncodeRaw_Sonic-16          	   10000	         2.598 ns/op	5012509.14 MB/s	       0 B/op	       0 allocs/op
+BenchmarkEncodeSkip_Sonic-16         	   10000	      2266 ns/op	5747.69 MB/s	   13581 B/op	       1 allocs/op
+BenchmarkEncodeLoad_Sonic-16         	   10000	      2282 ns/op	5706.94 MB/s	   13578 B/op	       1 allocs/op
+BenchmarkParser_Sonic-16             	   10000	      3276 ns/op	3975.36 MB/s	    1096 B/op	       4 allocs/op
+BenchmarkParser_Parallel_Sonic-16    	   10000	       512.8 ns/op	25394.69 MB/s	    1098 B/op	       4 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	0.096s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkNodeGetByPath-16        	10000000	        17.50 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructGetByPath-16      	10000000	        10.04 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeIndex-16            	10000000	         6.874 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructIndex-16          	10000000	         0.3456 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceIndex-16           	10000000	         0.3454 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapIndex-16             	10000000	        54.30 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeGet-16              	10000000	        21.73 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceGet-16             	10000000	         7.601 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapGet-16               	10000000	        10.24 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSet-16              	10000000	        66.86 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapSet-16               	10000000	        14.93 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSetByIndex-16       	10000000	        43.02 ns/op	      32 B/op	       1 allocs/op
+BenchmarkSliceSetByIndex-16      	10000000	         0.8637 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructSetByIndex-16     	10000000	         0.3458 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeUnset-16            	10000000	        24.70 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapUnset-16             	10000000	         8.294 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodUnsetByIndex-16      	10000000	        14.73 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceUnsetByIndex-16    	10000000	         2.922 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeAdd-16              	10000000	       222.0 ns/op	     576 B/op	       1 allocs/op
+BenchmarkSliceAdd-16             	10000000	        42.39 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapAdd-16               	10000000	        29.03 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	6.016s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkGetOne_Sonic-16                 	 1000000	      2760 ns/op	4718.92 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Sonic-16             	 1000000	      2863 ns/op	4548.77 MB/s	      56 B/op	       2 allocs/op
+BenchmarkGetFull_Sonic-16                	 1000000	     11801 ns/op	1103.53 MB/s	       0 B/op	       0 allocs/op
+BenchmarkGetWithManyCompare_Sonic-16     	 1000000	      2867 ns/op	 244.55 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOne_Parallel_Sonic-16        	 1000000	       336.5 ns/op	38696.13 MB/s	      34 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Parallel_Sonic-16    	 1000000	       318.5 ns/op	40883.20 MB/s	      58 B/op	       2 allocs/op
+BenchmarkSetOne_Sonic-16                 	 1000000	      6989 ns/op	1863.44 MB/s	    1097 B/op	       3 allocs/op
+BenchmarkSetOne_Parallel_Sonic-16        	 1000000	       958.4 ns/op	13587.87 MB/s	    1226 B/op	       3 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	28.913s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkEncodeRaw_Sonic-16          	   10000	         3.360 ns/op	3875662.16 MB/s	       0 B/op	       0 allocs/op
+BenchmarkEncodeSkip_Sonic-16         	   10000	      2334 ns/op	5579.90 MB/s	   13587 B/op	       1 allocs/op
+BenchmarkEncodeLoad_Sonic-16         	   10000	      2288 ns/op	5691.30 MB/s	   13580 B/op	       1 allocs/op
+BenchmarkParser_Sonic-16             	   10000	      3277 ns/op	3974.54 MB/s	    1096 B/op	       4 allocs/op
+BenchmarkParser_Parallel_Sonic-16    	   10000	       490.6 ns/op	26542.63 MB/s	    1098 B/op	       4 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	0.096s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkNodeGetByPath-16        	10000000	        13.28 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructGetByPath-16      	10000000	         5.022 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeIndex-16            	10000000	         6.892 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructIndex-16          	10000000	         0.3449 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceIndex-16           	10000000	         0.3449 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapIndex-16             	10000000	        54.23 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeGet-16              	10000000	        21.74 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceGet-16             	10000000	         7.592 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapGet-16               	10000000	        10.24 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSet-16              	10000000	        66.65 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapSet-16               	10000000	        14.91 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSetByIndex-16       	10000000	        42.32 ns/op	      32 B/op	       1 allocs/op
+BenchmarkSliceSetByIndex-16      	10000000	         0.8638 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructSetByIndex-16     	10000000	         0.3461 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeUnset-16            	10000000	        24.73 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapUnset-16             	10000000	         8.295 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodUnsetByIndex-16      	10000000	        14.61 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceUnsetByIndex-16    	10000000	         2.921 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeAdd-16              	10000000	       221.7 ns/op	     576 B/op	       1 allocs/op
+BenchmarkSliceAdd-16             	10000000	        41.83 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapAdd-16               	10000000	        28.96 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	5.904s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkGetOne_Sonic-16                 	 1000000	      2763 ns/op	4713.47 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Sonic-16             	 1000000	      2909 ns/op	4477.50 MB/s	      56 B/op	       2 allocs/op
+BenchmarkGetFull_Sonic-16                	 1000000	     11795 ns/op	1104.07 MB/s	       0 B/op	       0 allocs/op
+BenchmarkGetWithManyCompare_Sonic-16     	 1000000	      2860 ns/op	 245.07 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOne_Parallel_Sonic-16        	 1000000	       311.4 ns/op	41823.61 MB/s	      33 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Parallel_Sonic-16    	 1000000	       320.4 ns/op	40645.78 MB/s	      58 B/op	       2 allocs/op
+BenchmarkSetOne_Sonic-16                 	 1000000	      6985 ns/op	1864.42 MB/s	    1097 B/op	       3 allocs/op
+BenchmarkSetOne_Parallel_Sonic-16        	 1000000	       957.0 ns/op	13608.22 MB/s	    1221 B/op	       3 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	28.923s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkEncodeRaw_Sonic-16          	   10000	         2.575 ns/op	5057279.33 MB/s	       0 B/op	       0 allocs/op
+BenchmarkEncodeSkip_Sonic-16         	   10000	      2310 ns/op	5637.37 MB/s	   13580 B/op	       1 allocs/op
+BenchmarkEncodeLoad_Sonic-16         	   10000	      2317 ns/op	5620.81 MB/s	   13588 B/op	       1 allocs/op
+BenchmarkParser_Sonic-16             	   10000	      3269 ns/op	3983.69 MB/s	    1096 B/op	       4 allocs/op
+BenchmarkParser_Parallel_Sonic-16    	   10000	       508.6 ns/op	25603.24 MB/s	    1098 B/op	       4 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	0.096s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkNodeGetByPath-16        	10000000	        13.28 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructGetByPath-16      	10000000	         5.023 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeIndex-16            	10000000	         6.879 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructIndex-16          	10000000	         0.3456 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceIndex-16           	10000000	         0.3454 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapIndex-16             	10000000	        54.19 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeGet-16              	10000000	        21.70 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceGet-16             	10000000	         7.594 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapGet-16               	10000000	        10.29 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSet-16              	10000000	        66.93 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapSet-16               	10000000	        14.90 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSetByIndex-16       	10000000	        42.94 ns/op	      32 B/op	       1 allocs/op
+BenchmarkSliceSetByIndex-16      	10000000	         0.8632 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructSetByIndex-16     	10000000	         0.3463 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeUnset-16            	10000000	        24.72 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapUnset-16             	10000000	         8.315 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodUnsetByIndex-16      	10000000	        14.62 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceUnsetByIndex-16    	10000000	         2.761 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeAdd-16              	10000000	       222.7 ns/op	     576 B/op	       1 allocs/op
+BenchmarkSliceAdd-16             	10000000	        41.63 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapAdd-16               	10000000	        29.00 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	5.919s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkGetOne_Sonic-16                 	 1000000	      2766 ns/op	4708.84 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Sonic-16             	 1000000	      2835 ns/op	4593.05 MB/s	      56 B/op	       2 allocs/op
+BenchmarkGetFull_Sonic-16                	 1000000	     11799 ns/op	1103.73 MB/s	       0 B/op	       0 allocs/op
+BenchmarkGetWithManyCompare_Sonic-16     	 1000000	      2869 ns/op	 244.30 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOne_Parallel_Sonic-16        	 1000000	       347.0 ns/op	37531.22 MB/s	      34 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Parallel_Sonic-16    	 1000000	       319.1 ns/op	40814.97 MB/s	      58 B/op	       2 allocs/op
+BenchmarkSetOne_Sonic-16                 	 1000000	      6986 ns/op	1864.11 MB/s	    1097 B/op	       3 allocs/op
+BenchmarkSetOne_Parallel_Sonic-16        	 1000000	       960.8 ns/op	13554.89 MB/s	    1227 B/op	       3 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	28.905s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkEncodeRaw_Sonic-16          	   10000	         2.581 ns/op	5045523.23 MB/s	       0 B/op	       0 allocs/op
+BenchmarkEncodeSkip_Sonic-16         	   10000	      2237 ns/op	5821.07 MB/s	   13582 B/op	       1 allocs/op
+BenchmarkEncodeLoad_Sonic-16         	   10000	      2260 ns/op	5761.88 MB/s	   13580 B/op	       1 allocs/op
+BenchmarkParser_Sonic-16             	   10000	      3292 ns/op	3956.04 MB/s	    1096 B/op	       4 allocs/op
+BenchmarkParser_Parallel_Sonic-16    	   10000	       500.5 ns/op	26018.32 MB/s	    1098 B/op	       4 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	0.095s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkNodeGetByPath-16        	10000000	        29.05 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructGetByPath-16      	10000000	         6.380 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeIndex-16            	10000000	         6.905 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructIndex-16          	10000000	         0.3456 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceIndex-16           	10000000	         0.3457 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapIndex-16             	10000000	        54.17 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeGet-16              	10000000	        21.69 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceGet-16             	10000000	         7.593 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapGet-16               	10000000	        10.23 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSet-16              	10000000	        66.64 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapSet-16               	10000000	        14.90 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSetByIndex-16       	10000000	        42.91 ns/op	      32 B/op	       1 allocs/op
+BenchmarkSliceSetByIndex-16      	10000000	         0.8633 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructSetByIndex-16     	10000000	         0.3449 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeUnset-16            	10000000	        24.69 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapUnset-16             	10000000	         8.292 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodUnsetByIndex-16      	10000000	        14.60 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceUnsetByIndex-16    	10000000	         2.835 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeAdd-16              	10000000	       220.7 ns/op	     576 B/op	       1 allocs/op
+BenchmarkSliceAdd-16             	10000000	        41.60 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapAdd-16               	10000000	        28.96 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	6.068s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkGetOne_Sonic-16                 	 1000000	      2762 ns/op	4715.37 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Sonic-16             	 1000000	      2876 ns/op	4528.85 MB/s	      56 B/op	       2 allocs/op
+BenchmarkGetFull_Sonic-16                	 1000000	     11811 ns/op	1102.65 MB/s	       0 B/op	       0 allocs/op
+BenchmarkGetWithManyCompare_Sonic-16     	 1000000	      2869 ns/op	 244.35 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOne_Parallel_Sonic-16        	 1000000	       345.5 ns/op	37691.02 MB/s	      34 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Parallel_Sonic-16    	 1000000	       318.6 ns/op	40873.18 MB/s	      59 B/op	       2 allocs/op
+BenchmarkSetOne_Sonic-16                 	 1000000	      6978 ns/op	1866.30 MB/s	    1096 B/op	       3 allocs/op
+BenchmarkSetOne_Parallel_Sonic-16        	 1000000	       958.0 ns/op	13593.99 MB/s	    1229 B/op	       3 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	28.938s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkEncodeRaw_Sonic-16          	   10000	         2.619 ns/op	4972318.74 MB/s	       0 B/op	       0 allocs/op
+BenchmarkEncodeSkip_Sonic-16         	   10000	      2269 ns/op	5739.83 MB/s	   13586 B/op	       1 allocs/op
+BenchmarkEncodeLoad_Sonic-16         	   10000	      2300 ns/op	5662.01 MB/s	   13582 B/op	       1 allocs/op
+BenchmarkParser_Sonic-16             	   10000	      3248 ns/op	4009.43 MB/s	    1096 B/op	       4 allocs/op
+BenchmarkParser_Parallel_Sonic-16    	   10000	       515.6 ns/op	25256.25 MB/s	    1098 B/op	       4 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	0.096s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkNodeGetByPath-16        	10000000	        17.47 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructGetByPath-16      	10000000	         4.962 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeIndex-16            	10000000	         6.916 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructIndex-16          	10000000	         0.3458 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceIndex-16           	10000000	         0.3455 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapIndex-16             	10000000	        54.32 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeGet-16              	10000000	        21.72 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceGet-16             	10000000	         7.596 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapGet-16               	10000000	        10.24 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSet-16              	10000000	        67.20 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapSet-16               	10000000	        14.88 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSetByIndex-16       	10000000	        42.48 ns/op	      32 B/op	       1 allocs/op
+BenchmarkSliceSetByIndex-16      	10000000	         0.8637 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructSetByIndex-16     	10000000	         0.3457 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeUnset-16            	10000000	        24.79 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapUnset-16             	10000000	         8.291 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodUnsetByIndex-16      	10000000	        14.62 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceUnsetByIndex-16    	10000000	         2.841 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeAdd-16              	10000000	       228.4 ns/op	     576 B/op	       1 allocs/op
+BenchmarkSliceAdd-16             	10000000	        41.55 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapAdd-16               	10000000	        28.99 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	6.017s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkGetOne_Sonic-16                 	 1000000	      2763 ns/op	4713.73 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Sonic-16             	 1000000	      2909 ns/op	4477.06 MB/s	      56 B/op	       2 allocs/op
+BenchmarkGetFull_Sonic-16                	 1000000	     11817 ns/op	1102.04 MB/s	       0 B/op	       0 allocs/op
+BenchmarkGetWithManyCompare_Sonic-16     	 1000000	      2842 ns/op	 246.64 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOne_Parallel_Sonic-16        	 1000000	       310.1 ns/op	42000.84 MB/s	      33 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Parallel_Sonic-16    	 1000000	       319.1 ns/op	40813.84 MB/s	      58 B/op	       2 allocs/op
+BenchmarkSetOne_Sonic-16                 	 1000000	      6993 ns/op	1862.18 MB/s	    1097 B/op	       3 allocs/op
+BenchmarkSetOne_Parallel_Sonic-16        	 1000000	       963.8 ns/op	13511.66 MB/s	    1230 B/op	       3 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	28.939s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkEncodeRaw_Sonic-16          	   10000	         2.588 ns/op	5031876.67 MB/s	       0 B/op	       0 allocs/op
+BenchmarkEncodeSkip_Sonic-16         	   10000	      2329 ns/op	5591.28 MB/s	   13587 B/op	       1 allocs/op
+BenchmarkEncodeLoad_Sonic-16         	   10000	      2361 ns/op	5515.89 MB/s	   13584 B/op	       1 allocs/op
+BenchmarkParser_Sonic-16             	   10000	      3298 ns/op	3949.02 MB/s	    1096 B/op	       4 allocs/op
+BenchmarkParser_Parallel_Sonic-16    	   10000	       528.9 ns/op	24623.57 MB/s	    1098 B/op	       4 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	0.097s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkNodeGetByPath-16        	10000000	        17.48 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructGetByPath-16      	10000000	         7.165 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeIndex-16            	10000000	         6.904 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructIndex-16          	10000000	         0.3454 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceIndex-16           	10000000	         0.3449 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapIndex-16             	10000000	        54.22 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeGet-16              	10000000	        21.83 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceGet-16             	10000000	         7.592 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapGet-16               	10000000	        10.23 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSet-16              	10000000	        66.82 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapSet-16               	10000000	        14.86 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSetByIndex-16       	10000000	        42.59 ns/op	      32 B/op	       1 allocs/op
+BenchmarkSliceSetByIndex-16      	10000000	         0.8636 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructSetByIndex-16     	10000000	         0.3449 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeUnset-16            	10000000	        24.70 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapUnset-16             	10000000	         8.301 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodUnsetByIndex-16      	10000000	        14.62 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceUnsetByIndex-16    	10000000	         2.763 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeAdd-16              	10000000	       221.6 ns/op	     576 B/op	       1 allocs/op
+BenchmarkSliceAdd-16             	10000000	        40.97 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapAdd-16               	10000000	        28.97 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	5.961s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkGetOne_Sonic-16                 	 1000000	      2757 ns/op	4722.76 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Sonic-16             	 1000000	      2910 ns/op	4475.09 MB/s	      56 B/op	       2 allocs/op
+BenchmarkGetFull_Sonic-16                	 1000000	     11790 ns/op	1104.60 MB/s	       0 B/op	       0 allocs/op
+BenchmarkGetWithManyCompare_Sonic-16     	 1000000	      2881 ns/op	 243.33 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOne_Parallel_Sonic-16        	 1000000	       323.3 ns/op	40279.02 MB/s	      33 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Parallel_Sonic-16    	 1000000	       320.2 ns/op	40669.89 MB/s	      58 B/op	       2 allocs/op
+BenchmarkSetOne_Sonic-16                 	 1000000	      6981 ns/op	1865.46 MB/s	    1096 B/op	       3 allocs/op
+BenchmarkSetOne_Parallel_Sonic-16        	 1000000	       959.1 ns/op	13578.67 MB/s	    1225 B/op	       3 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	28.945s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkEncodeRaw_Sonic-16          	   10000	         2.576 ns/op	5055316.18 MB/s	       0 B/op	       0 allocs/op
+BenchmarkEncodeSkip_Sonic-16         	   10000	      2233 ns/op	5831.51 MB/s	   13582 B/op	       1 allocs/op
+BenchmarkEncodeLoad_Sonic-16         	   10000	      2343 ns/op	5559.27 MB/s	   13582 B/op	       1 allocs/op
+BenchmarkParser_Sonic-16             	   10000	      3290 ns/op	3957.78 MB/s	    1096 B/op	       4 allocs/op
+BenchmarkParser_Parallel_Sonic-16    	   10000	       523.8 ns/op	24860.20 MB/s	    1098 B/op	       4 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	0.096s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkNodeGetByPath-16        	10000000	        17.53 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructGetByPath-16      	10000000	         4.957 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeIndex-16            	10000000	         6.890 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructIndex-16          	10000000	         0.3449 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceIndex-16           	10000000	         0.3460 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapIndex-16             	10000000	        54.40 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeGet-16              	10000000	        21.58 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceGet-16             	10000000	         7.594 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapGet-16               	10000000	        10.22 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSet-16              	10000000	        66.97 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapSet-16               	10000000	        14.87 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSetByIndex-16       	10000000	        43.36 ns/op	      32 B/op	       1 allocs/op
+BenchmarkSliceSetByIndex-16      	10000000	         0.8631 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructSetByIndex-16     	10000000	         0.3454 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeUnset-16            	10000000	        24.73 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapUnset-16             	10000000	         8.283 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodUnsetByIndex-16      	10000000	        14.62 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceUnsetByIndex-16    	10000000	         2.843 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeAdd-16              	10000000	       221.2 ns/op	     576 B/op	       1 allocs/op
+BenchmarkSliceAdd-16             	10000000	        41.35 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapAdd-16               	10000000	        29.03 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	5.948s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkGetOne_Sonic-16                 	 1000000	      2759 ns/op	4719.65 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Sonic-16             	 1000000	      2901 ns/op	4488.50 MB/s	      56 B/op	       2 allocs/op
+BenchmarkGetFull_Sonic-16                	 1000000	     11786 ns/op	1104.95 MB/s	       0 B/op	       0 allocs/op
+BenchmarkGetWithManyCompare_Sonic-16     	 1000000	      2844 ns/op	 246.47 MB/s	      32 B/op	       1 allocs/op
+BenchmarkGetOne_Parallel_Sonic-16        	 1000000	       310.4 ns/op	41961.57 MB/s	      33 B/op	       1 allocs/op
+BenchmarkGetOneSafe_Parallel_Sonic-16    	 1000000	       318.7 ns/op	40857.63 MB/s	      58 B/op	       2 allocs/op
+BenchmarkSetOne_Sonic-16                 	 1000000	      6978 ns/op	1866.29 MB/s	    1097 B/op	       3 allocs/op
+BenchmarkSetOne_Parallel_Sonic-16        	 1000000	       961.4 ns/op	13546.52 MB/s	    1228 B/op	       3 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	28.881s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkEncodeRaw_Sonic-16          	   10000	         2.585 ns/op	5037716.14 MB/s	       0 B/op	       0 allocs/op
+BenchmarkEncodeSkip_Sonic-16         	   10000	      2303 ns/op	5654.33 MB/s	   13583 B/op	       1 allocs/op
+BenchmarkEncodeLoad_Sonic-16         	   10000	      2250 ns/op	5789.21 MB/s	   13589 B/op	       1 allocs/op
+BenchmarkParser_Sonic-16             	   10000	      3289 ns/op	3959.63 MB/s	    1096 B/op	       4 allocs/op
+BenchmarkParser_Parallel_Sonic-16    	   10000	       506.2 ns/op	25725.39 MB/s	    1098 B/op	       4 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	0.096s
+goos: linux
+goarch: arm64
+pkg: github.com/bytedance/sonic/ast
+BenchmarkNodeGetByPath-16        	10000000	        15.13 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructGetByPath-16      	10000000	         9.757 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeIndex-16            	10000000	         6.872 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructIndex-16          	10000000	         0.3458 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceIndex-16           	10000000	         0.3457 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapIndex-16             	10000000	        54.21 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeGet-16              	10000000	        21.60 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceGet-16             	10000000	         7.593 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapGet-16               	10000000	        10.23 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSet-16              	10000000	        66.61 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapSet-16               	10000000	        14.88 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeSetByIndex-16       	10000000	        42.93 ns/op	      32 B/op	       1 allocs/op
+BenchmarkSliceSetByIndex-16      	10000000	         0.8636 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStructSetByIndex-16     	10000000	         0.3457 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeUnset-16            	10000000	        24.73 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMapUnset-16             	10000000	         8.492 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodUnsetByIndex-16      	10000000	        14.61 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSliceUnsetByIndex-16    	10000000	         2.763 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNodeAdd-16              	10000000	       223.3 ns/op	     576 B/op	       1 allocs/op
+BenchmarkSliceAdd-16             	10000000	        42.10 ns/op	      32 B/op	       1 allocs/op
+BenchmarkMapAdd-16               	10000000	        28.98 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/bytedance/sonic/ast	5.993s
+test name                                mid 4(ns/op)                      avg(ns/op)
+---------------------------------------------------------------------------
+BenchmarkGetOne_Sonic-16                    2762.000
+BenchmarkGetOneSafe_Sonic-16                2890.750
+BenchmarkGetFull_Sonic-16                   11798.500
+BenchmarkGetWithManyCompare_Sonic-16        2864.750
+BenchmarkGetOne_Parallel_Sonic-16           329.175
+BenchmarkGetOneSafe_Parallel_Sonic-16       319.275
+BenchmarkSetOne_Sonic-16                    6984.250
+BenchmarkSetOne_Parallel_Sonic-16           959.675
+BenchmarkEncodeRaw_Sonic-16                 2.588
+BenchmarkEncodeSkip_Sonic-16                2287.000
+BenchmarkEncodeLoad_Sonic-16                2296.750
+BenchmarkParser_Sonic-16                    3283.000
+BenchmarkParser_Parallel_Sonic-16           510.800
+BenchmarkNodeGetByPath-16                   16.895
+BenchmarkStructGetByPath-16                 5.897
+BenchmarkNodeIndex-16                       6.891
+BenchmarkStructIndex-16                     0.346
+BenchmarkSliceIndex-16                      0.346
+BenchmarkMapIndex-16                        54.240
+BenchmarkNodeGet-16                         21.710
+BenchmarkSliceGet-16                        7.594
+BenchmarkMapGet-16                          10.235
+BenchmarkNodeSet-16                         66.815
+BenchmarkMapSet-16                          14.890
+BenchmarkNodeSetByIndex-16                  42.843
+BenchmarkSliceSetByIndex-16                 0.864
+BenchmarkStructSetByIndex-16                0.346
+BenchmarkNodeUnset-16                       24.720
+BenchmarkMapUnset-16                        8.296
+BenchmarkNodUnsetByIndex-16                 14.617
+BenchmarkSliceUnsetByIndex-16               2.821
+BenchmarkNodeAdd-16                         222.000
+BenchmarkSliceAdd-16                        41.653
+BenchmarkMapAdd-16                          28.985
